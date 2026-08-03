@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Educational Policy Analysis &amp; Program Evaluation — A Graduate Resource</title>
+<meta name="description" content="An executive, graduate-level interactive resource on educational policy analysis and program evaluation: the policy process, decision analysis, logic models, evaluation frameworks, policy criteria, resource allocation, and equity. Authored by Freddrick Logan.">
+<meta name="author" content="Freddrick Logan">
+<meta name="theme-color" content="#0a1730">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Educational Policy Analysis &amp; Program Evaluation">
+<meta property="og:description" content="From framing a policy problem to weighing options, allocating resources, and judging effects and equity — an interactive graduate-level resource.">
+<meta property="og:url" content="https://freddricklogan.github.io/educational-policy-analysis/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230a1730'/%3E%3Cline x1='16' y1='6' x2='16' y2='24' stroke='%2360a5fa' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='8' y1='10' x2='24' y2='10' stroke='%2360a5fa' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='7' r='2' fill='%2393c5fd'/%3E%3Cpath d='M8 10 L5 17 a3 3 0 0 0 6 0 Z' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M24 10 L21 17 a3 3 0 0 0 6 0 Z' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linejoin='round'/%3E%3Cline x1='11' y1='24' x2='21' y2='24' stroke='%2360a5fa' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#0a1730;--navy2:#0e2143;--panel:#122a4f;--panel2:#14315c;--panel3:#173a6b;
+    --line:rgba(96,140,220,.20);--line2:rgba(96,140,220,.34);
+    --accent:#3b82f6;--accent2:#60a5fa;--accent3:#93c5fd;
+    --ink:#e7edf7;--muted:#9fb2d0;--dim:#6f84a8;
+    --good:#4ade80;--warn:#fbbf24;--bad:#f87171;
+    --r:14px;--maxw:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);line-height:1.65;
+    background:radial-gradient(1200px 600px at 82% -8%,rgba(59,130,246,.12),transparent),
+      radial-gradient(900px 500px at 5% 8%,rgba(37,99,235,.08),transparent),
+      linear-gradient(175deg,#081226,#0a1730 46%,#0b1c3a)}
+  a{color:var(--accent2);text-decoration:none}a:hover{color:var(--accent3);text-decoration:underline}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  h2{font-size:1.7rem;letter-spacing:-.02em;margin-bottom:6px}
+  h3{font-size:1.12rem;color:var(--accent3);margin-bottom:8px}
+  p{color:#d2ddf0}
+  .lead{color:var(--muted)}
+  .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700;color:var(--accent2)}
+
+  /* NAV */
+  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
+    background:rgba(9,20,42,.82);border-bottom:1px solid var(--line)}
+  nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:14px}
+  .logo{display:flex;align-items:center;gap:11px;font-weight:800;font-size:1rem;white-space:nowrap}
+  .logo svg{width:30px;height:30px}
+  .navlinks{display:flex;gap:20px;font-size:.85rem;overflow-x:auto}
+  .navlinks a{color:var(--muted);font-weight:600;white-space:nowrap}
+  .navlinks a:hover{color:var(--ink);text-decoration:none}
+  @media(max-width:820px){.navlinks{display:none}}
+
+  /* HERO */
+  header.hero{padding:76px 0 54px;position:relative}
+  .hero .eyebrow{margin-bottom:16px}
+  .hero h1{font-size:clamp(2.2rem,5.4vw,3.5rem);line-height:1.06;letter-spacing:-.03em;font-weight:800;
+    background:linear-gradient(120deg,#e7edf7 30%,#8fbaff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:20px}
+  .hero p{font-size:1.16rem;color:var(--muted);max-width:680px}
+  .hero .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:12px 22px;border-radius:11px;font-weight:700;font-size:.92rem;cursor:pointer;border:1px solid var(--line2);
+    background:transparent;color:var(--ink);transition:.15s}
+  .btn.primary{background:var(--accent);border-color:transparent;color:#06122b}
+  .btn.primary:hover{background:var(--accent2)}
+  .btn:hover{border-color:var(--accent)}
+  .statrow{display:flex;gap:34px;margin-top:46px;flex-wrap:wrap}
+  .statrow .s .n{font-size:1.7rem;font-weight:800;color:var(--accent2)}
+  .statrow .s .l{font-size:.82rem;color:var(--dim);text-transform:uppercase;letter-spacing:.08em}
+
+  section{padding:52px 0;border-top:1px solid var(--line)}
+  .sec-head{margin-bottom:30px;max-width:720px}
+  .sec-head .eyebrow{display:block;margin-bottom:10px}
+
+  .grid{display:grid;gap:18px}
+  .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+  @media(max-width:820px){.g2,.g3,.g4{grid-template-columns:1fr}}
+  .card{background:linear-gradient(162deg,var(--panel),var(--panel2));border:1px solid var(--line);
+    border-radius:var(--r);padding:22px}
+  .card.hoverable{transition:.18s}.card.hoverable:hover{border-color:var(--line2);transform:translateY(-2px)}
+  .card .tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+    color:var(--accent2);background:rgba(59,130,246,.12);padding:3px 9px;border-radius:20px;margin-bottom:12px}
+  .card ul{margin:10px 0 0 0;padding-left:18px;color:var(--muted);font-size:.9rem}
+  .card ul li{margin-bottom:5px}
+  .kv{font-size:.9rem;color:var(--muted);margin-top:4px}.kv b{color:var(--ink);font-weight:600}
+
+  /* TABS (five approaches) */
+  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
+  .tab{padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--muted);
+    font-weight:700;font-size:.88rem;cursor:pointer;transition:.15s}
+  .tab:hover{color:var(--ink);border-color:var(--line2)}
+  .tab.active{background:var(--accent);border-color:transparent;color:#06122b}
+  .panel{display:none;animation:fade .3s ease}
+  .panel.active{display:block}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .panel-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+  @media(max-width:820px){.panel-grid{grid-template-columns:1fr}}
+  .facts{list-style:none;padding:0}
+  .facts li{display:flex;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+  .facts li span:first-child{color:var(--dim);min-width:130px;font-weight:600}
+  .facts li span:last-child{color:var(--ink)}
+
+  /* SELECTOR widget */
+  .selector{background:linear-gradient(162deg,var(--panel2),var(--panel3));border:1px solid var(--line2);border-radius:16px;padding:26px}
+  .q{margin-bottom:18px}
+  .q p{font-weight:600;margin-bottom:10px}
+  .opts{display:flex;gap:8px;flex-wrap:wrap}
+  .opt{padding:9px 14px;border-radius:9px;border:1px solid var(--line);background:rgba(255,255,255,.02);
+    color:var(--muted);cursor:pointer;font-size:.88rem;transition:.15s}
+  .opt:hover{border-color:var(--accent)}
+  .opt.sel{background:rgba(59,130,246,.18);border-color:var(--accent);color:var(--ink)}
+  .result{margin-top:18px;padding:18px;border-radius:12px;background:rgba(59,130,246,.10);border:1px solid var(--accent);
+    display:none}
+  .result.show{display:block;animation:fade .3s}
+  .result .big{font-size:1.3rem;font-weight:800;color:var(--accent2);margin-bottom:4px}
+
+  /* STEPPER workflow */
+  .steps{counter-reset:s;display:grid;gap:14px}
+  .step{display:flex;gap:16px;align-items:flex-start;background:linear-gradient(162deg,var(--panel),var(--panel2));
+    border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .step .num{counter-increment:s;flex:0 0 38px;height:38px;width:38px;border-radius:10px;display:grid;place-items:center;
+    background:rgba(59,130,246,.14);color:var(--accent2);font-weight:800}
+  .step .num::before{content:counter(s,decimal-leading-zero)}
+  .step h4{font-size:1rem;margin-bottom:3px}
+  .step p{font-size:.9rem;color:var(--muted)}
+
+  /* TABLE */
+  table{width:100%;border-collapse:collapse;font-size:.9rem;margin-top:8px}
+  th{text-align:left;color:var(--accent3);font-size:.74rem;text-transform:uppercase;letter-spacing:.07em;
+    padding:11px 12px;border-bottom:1px solid var(--line2)}
+  td{padding:11px 12px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
+  td b{color:var(--ink);font-weight:600}
+  .tbl-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line);background:rgba(9,20,42,.4)}
+
+  /* CODING walkthrough */
+  .coder{background:linear-gradient(162deg,var(--panel2),var(--panel3));border:1px solid var(--line2);border-radius:16px;padding:24px}
+  .ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:22px 0 8px;position:relative}
+  @media(max-width:820px){.ladder{grid-template-columns:1fr;gap:10px}}
+  .rung{text-align:center;padding:14px 10px;border:1px solid var(--line);background:rgba(255,255,255,.02);position:relative}
+  .rung:first-child{border-radius:10px 0 0 10px}.rung:last-child{border-radius:0 10px 10px 0}
+  @media(max-width:820px){.rung{border-radius:10px!important}}
+  .rung.on{background:rgba(59,130,246,.18);border-color:var(--accent)}
+  .rung .lbl{font-size:.72rem;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin-bottom:6px}
+  .rung .val{font-size:.9rem;color:var(--ink);font-weight:600;min-height:2.6em}
+  .quote{font-style:italic;color:var(--accent3);border-left:3px solid var(--accent);padding:8px 14px;margin-bottom:8px;background:rgba(59,130,246,.06)}
+
+  /* CHECKLIST scorer */
+  .checklist{display:grid;gap:10px}
+  .ck{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1px solid var(--line);border-radius:10px;
+    cursor:pointer;transition:.15s;background:rgba(255,255,255,.015)}
+  .ck:hover{border-color:var(--line2)}
+  .ck.on{background:rgba(74,222,128,.08);border-color:rgba(74,222,128,.5)}
+  .ck .box{flex:0 0 20px;height:20px;width:20px;border-radius:6px;border:2px solid var(--dim);display:grid;place-items:center;margin-top:2px}
+  .ck.on .box{background:var(--good);border-color:var(--good)}
+  .ck.on .box::after{content:'✓';color:#06210f;font-weight:900;font-size:.75rem}
+  .ck .t b{display:block;color:var(--ink);font-size:.92rem}
+  .ck .t span{font-size:.82rem;color:var(--muted)}
+  .score{margin-top:20px;padding:20px;border-radius:14px;text-align:center;background:linear-gradient(162deg,var(--panel),var(--panel2));border:1px solid var(--line2)}
+  .score .meter{height:12px;border-radius:8px;background:rgba(255,255,255,.06);overflow:hidden;margin:14px 0}
+  .score .fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--accent),var(--good));transition:width .4s}
+  .score .verdict{font-weight:800;font-size:1.15rem}
+
+  .callout{border-left:3px solid var(--accent);background:rgba(59,130,246,.07);border-radius:0 10px 10px 0;padding:14px 18px;margin:16px 0;font-size:.94rem;color:var(--muted)}
+  .callout b{color:var(--ink)}
+
+  .scholars{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+  .chip{font-size:.82rem;padding:6px 12px;border-radius:20px;border:1px solid var(--line);color:var(--muted);background:rgba(255,255,255,.02)}
+
+  footer{border-top:1px solid var(--line);padding:40px 0 60px;margin-top:20px;color:var(--dim);font-size:.9rem}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+  footer a{color:var(--accent2)}
+  .backhub{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;color:var(--muted);margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<nav class="top"><div class="wrap">
+  <div class="logo">
+    <svg viewBox="0 0 32 32"><rect width="32" height="32" rx="7" fill="#122a4f"/><line x1="16" y1="6" x2="16" y2="24" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round"/><line x1="8" y1="10" x2="24" y2="10" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="7" r="2" fill="#93c5fd"/><path d="M8 10 L5 17 a3 3 0 0 0 6 0 Z" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/><path d="M24 10 L21 17 a3 3 0 0 0 6 0 Z" fill="none" stroke="#3b82f6" stroke-width="2" stroke-linejoin="round"/><line x1="11" y1="24" x2="21" y2="24" stroke="#60a5fa" stroke-width="2.2" stroke-linecap="round"/></svg>
+    Policy &amp; Evaluation
+  </div>
+  <div class="navlinks">
+    <a href="#process">Policy Process</a>
+    <a href="#decision">Decision Analysis</a>
+    <a href="#logicmodel">Logic Model</a>
+    <a href="#frameworks">Frameworks</a>
+    <a href="#criteria">Criteria</a>
+    <a href="#instruments">Instruments</a>
+    <a href="#cba">Cost–Benefit</a>
+    <a href="#stakeholders">Stakeholders</a>
+    <a href="#resources">Resources</a>
+    <a href="#implementation">Implementation</a>
+    <a href="#equity">Equity</a>
+    <a href="#memo">Memo</a>
+    <a href="#glossary">Glossary</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <a class="backhub" href="../resources/">← Educational Leadership &amp; Research Resources</a>
+  <span class="eyebrow">A Graduate-Level Resource</span>
+  <h1>Educational Policy Analysis<br>&amp; Program Evaluation.</h1>
+  <p class="lead">From framing a policy problem to weighing options, allocating scarce resources, and judging effects and equity. A rigorous, interactive guide to the disciplined analysis that turns evidence into decisions — built for graduate students, evaluators, and educational leaders who must act under real constraints.</p>
+  <div class="cta">
+    <a class="btn primary" href="#logicmodel">Build a logic model</a>
+    <a class="btn" href="#criteria">Weigh a policy's options</a>
+  </div>
+  <div class="statrow">
+    <div class="s"><div class="n">6</div><div class="l">Stages of the policy cycle</div></div>
+    <div class="s"><div class="n">4</div><div class="l">Decision-analysis strands</div></div>
+    <div class="s"><div class="n">5</div><div class="l">Logic-model stages</div></div>
+    <div class="s"><div class="n">5</div><div class="l">Policy criteria</div></div>
+  </div>
+</div></header>
+
+<!-- ORIENTATION -->
+<section id="what"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Orientation</span><h2>Two crafts, one discipline of judgment</h2>
+    <p class="lead">Policy analysis asks which course of action best serves a public purpose <em>before</em> we act; program evaluation asks whether what we did actually worked, for whom, and at what cost <em>after</em> we act. Together they form a continuous loop of reasoned decision-making under uncertainty.</p></div>
+  <div class="grid g2">
+    <div class="card"><h3>Policy analysis — reasoning toward a choice</h3>
+      <ul>
+        <li>Defines a problem and clarifies whose problem it is</li>
+        <li>Constructs and compares realistic alternatives</li>
+        <li>Projects outcomes and confronts trade-offs explicitly</li>
+        <li>Applies criteria — effectiveness, efficiency, equity, feasibility</li>
+        <li>Recommends a defensible course of action, with candor about limits</li>
+      </ul></div>
+    <div class="card"><h3>Program evaluation — judging merit and worth</h3>
+      <ul>
+        <li>Assesses whether a program is well-designed and implemented</li>
+        <li>Measures outcomes against a theory of change</li>
+        <li>Attributes effects with appropriate design and comparison</li>
+        <li>Weighs cost against benefit and disaggregates by group</li>
+        <li>Feeds credible findings back into decision and improvement</li>
+      </ul></div>
+  </div>
+  <div class="callout"><b>The analyst's stance</b> — neither advocate nor technician. Good analysis is transparent about assumptions and values, honest about what the evidence can and cannot bear, and useful to a decision-maker who must choose among imperfect options.</div>
+</div></section>
+
+<!-- POLICY PROCESS -->
+<section id="process"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">The policy process</span><h2>The stages of the policy cycle</h2>
+    <p class="lead">The stages heuristic (Lasswell, Jones, Anderson) frames policymaking as a cycle. Real politics is messier and iterative — but the stages give you a spine for locating where a decision sits and what analysis it needs.</p></div>
+  <div class="steps">
+    <div class="step"><div class="num"></div><div><h4>Problem definition</h4><p>Name the condition, establish that it is a public problem, and frame it. How a problem is defined largely determines which solutions become thinkable.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Agenda setting</h4><p>The problem competes for scarce attention among policymakers and the public. Focusing events, framing, and problem/politics/policy streams (Kingdon) open a window.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Policy formulation</h4><p>Alternatives are designed and analyzed — instruments, mandates, incentives, capacity-building — and their likely consequences projected and compared.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Adoption / legitimation</h4><p>An option is authorized through legislative, regulatory, or administrative choice, acquiring legitimacy and the resources to proceed.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Implementation</h4><p>The policy is enacted by agencies, schools, and street-level actors whose discretion shapes what the policy actually becomes on the ground.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Evaluation &amp; change</h4><p>Effects, costs, and equity are assessed; findings feed back into maintenance, revision, or termination — and the cycle begins again.</p></div></div>
+  </div>
+  <div class="callout"><b>Implementation is not a formality.</b> Pressman &amp; Wildavsky showed that the gap between a policy's promise and its delivery is where many reforms are lost — a "complexity of joint action" across many hands, each of whom can slow or reshape it.</div>
+</div></section>
+
+<!-- DECISION ANALYSIS (tabs) -->
+<section id="decision"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Decision Analysis I–IV</span><h2>A graduate arc in systematic inquiry</h2>
+    <p class="lead">The disciplined study of decisions builds in four movements — from the logic of inquiry itself, through quantitative and qualitative evidence, to the applied craft of program analysis and policy evaluation. Select a strand to see its purpose, core tools, and the questions it answers.</p></div>
+  <div class="tabs" id="databs">
+    <button class="tab active" data-p="da1">I · Logic of Inquiry</button>
+    <button class="tab" data-p="da2">II · Quantitative Analysis</button>
+    <button class="tab" data-p="da3">III · Qualitative Analysis</button>
+    <button class="tab" data-p="da4">IV · Program &amp; Policy Evaluation</button>
+  </div>
+
+  <div class="panel active" id="da1"><div class="panel-grid">
+    <div class="card"><h3>I — The logic of systematic inquiry</h3>
+      <p>Establishes how we come to warranted knowledge for decisions: research questions, concepts and their measurement, the difference between association and cause, validity of inference, and the ethics of studying people. It is the grammar the later strands speak.</p>
+      <p class="kv" style="margin-top:12px"><b>Central question:</b> "How do we reason from evidence to a defensible claim we can act on?"</p>
+      <div class="scholars"><span class="chip">Shadish, Cook &amp; Campbell</span><span class="chip">King, Keohane &amp; Verba</span><span class="chip">Popper</span></div></div>
+    <ul class="facts">
+      <li><span>Focus</span><span>Design of inquiry &amp; inference</span></li>
+      <li><span>Key ideas</span><span>Validity, causation, measurement, ethics</span></li>
+      <li><span>Distinctions</span><span>Internal / external / construct validity</span></li>
+      <li><span>Skill</span><span>Framing answerable, decision-relevant questions</span></li>
+      <li><span>Output</span><span>A coherent research / evaluation design</span></li>
+    </ul>
+  </div></div>
+
+  <div class="panel" id="da2"><div class="panel-grid">
+    <div class="card"><h3>II — Quantitative analysis</h3>
+      <p>Turns numbers into evidence about scope, difference, and effect: descriptive statistics, sampling and inference, regression, and the design logic behind experiments and quasi-experiments used to estimate causal effects of programs and policies.</p>
+      <p class="kv" style="margin-top:12px"><b>Central question:</b> "How much, how many, and does the difference we see exceed chance and rival explanations?"</p>
+      <div class="scholars"><span class="chip">Angrist &amp; Pischke</span><span class="chip">Murnane &amp; Willett</span><span class="chip">Cook &amp; Campbell</span></div></div>
+    <ul class="facts">
+      <li><span>Data</span><span>Measured variables, administrative &amp; survey data</span></li>
+      <li><span>Tools</span><span>Regression, hypothesis tests, effect sizes</span></li>
+      <li><span>Causal designs</span><span>RCT, difference-in-differences, RD, IV</span></li>
+      <li><span>Strength</span><span>Scope, precision, generalization</span></li>
+      <li><span>Output</span><span>Estimated effects with uncertainty</span></li>
+    </ul>
+  </div></div>
+
+  <div class="panel" id="da3"><div class="panel-grid">
+    <div class="card"><h3>III — Qualitative analysis</h3>
+      <p>Explains how and why a policy plays out as it does. Through interviews, observation, and documents it recovers meaning, mechanism, and context — indispensable for understanding implementation, unintended consequences, and the experience of those a policy touches.</p>
+      <p class="kv" style="margin-top:12px"><b>Central question:</b> "What is actually happening here, how do people make sense of it, and through what mechanisms?"</p>
+      <div class="scholars"><span class="chip">Miles, Huberman &amp; Saldaña</span><span class="chip">Yin</span><span class="chip">Lipsky (street-level)</span></div></div>
+    <ul class="facts">
+      <li><span>Data</span><span>Interviews, observation, documents, cases</span></li>
+      <li><span>Tools</span><span>Coding, thematic &amp; case analysis, process tracing</span></li>
+      <li><span>Strength</span><span>Meaning, mechanism, implementation detail</span></li>
+      <li><span>Complements</span><span>Explains the "why" behind quantitative effects</span></li>
+      <li><span>Output</span><span>Contextual, mechanism-rich explanation</span></li>
+    </ul>
+  </div></div>
+
+  <div class="panel" id="da4"><div class="panel-grid">
+    <div class="card"><h3>IV — Program analysis &amp; policy evaluation</h3>
+      <p>Integrates the prior strands into applied practice: articulating a program's theory of change, framing evaluation questions, choosing a design fit for the decision, appraising costs and benefits, and judging merit, worth, and equity to inform a real choice.</p>
+      <p class="kv" style="margin-top:12px"><b>Central question:</b> "Did this program work — for whom, at what cost, and what should we do next?"</p>
+      <div class="scholars"><span class="chip">Rossi, Lipsey &amp; Freeman</span><span class="chip">Stufflebeam</span><span class="chip">Patton</span><span class="chip">Bardach</span></div></div>
+    <ul class="facts">
+      <li><span>Focus</span><span>Applied evaluation &amp; policy recommendation</span></li>
+      <li><span>Tools</span><span>Logic models, CIPP, cost-benefit, criteria</span></li>
+      <li><span>Modes</span><span>Formative, summative, developmental</span></li>
+      <li><span>Standard</span><span>Utility, feasibility, propriety, accuracy</span></li>
+      <li><span>Output</span><span>A defensible judgment &amp; recommendation</span></li>
+    </ul>
+  </div></div>
+</div></section>
+
+<!-- SIGNATURE WIDGET: LOGIC MODEL BUILDER -->
+<section id="logicmodel"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Signature interactive · Logic Model Builder</span><h2>Build a program's theory of change</h2>
+    <p class="lead">A logic model is the backbone of evaluation: it makes explicit how resources become activities, activities become results, and results — if the theory holds — become impact. Step through building one for a sample <b>after-school peer tutoring initiative</b>, then read any stage for its definition.</p></div>
+
+  <div class="coder">
+    <div class="quote" id="lmProgram">Sample program — Peer Tutoring Initiative: trained older students tutor struggling 9th-graders in reading and math twice weekly.</div>
+    <div class="ladder">
+      <div class="rung on" data-r="0"><div class="lbl">Inputs</div><div class="val" id="r0"></div></div>
+      <div class="rung" data-r="1"><div class="lbl">Activities</div><div class="val" id="r1"></div></div>
+      <div class="rung" data-r="2"><div class="lbl">Outputs</div><div class="val" id="r2"></div></div>
+      <div class="rung" data-r="3"><div class="lbl">Outcomes (S/M/L)</div><div class="val" id="r3"></div></div>
+      <div class="rung" data-r="4"><div class="lbl">Impact</div><div class="val" id="r4"></div></div>
+    </div>
+    <div style="display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:14px;flex-wrap:wrap">
+      <p class="kv" id="lmHint" style="max-width:58%">Click any stage above, or walk through the chain one link at a time.</p>
+      <div style="display:flex;gap:8px">
+        <button class="btn" id="lmPrev">Back</button>
+        <button class="btn primary" id="lmNext">Next stage →</button>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:16px" id="lmDef"></div>
+  </div>
+
+  <div class="grid g3" style="margin-top:20px">
+    <div class="card"><span class="tag">Read left to right</span><h3>The "if–then" chain</h3>
+      <p class="kv">Each stage is linked by an implicit "if we invest these inputs, then we can run these activities; if these activities produce these outputs, then these outcomes should follow." Naming the links exposes where a theory of change can break.</p></div>
+    <div class="card"><span class="tag">Outputs ≠ outcomes</span><h3>Doing vs. changing</h3>
+      <p class="kv"><b>Outputs</b> count what the program produced (sessions held, students served). <b>Outcomes</b> capture change in participants (skills, behavior, achievement). Confusing the two is the most common evaluation error.</p></div>
+    <div class="card"><span class="tag">Assumptions &amp; context</span><h3>What must hold true</h3>
+      <p class="kv">Every model rests on assumptions (tutors attend, matches are stable) and external factors (home support, school climate). Surfacing them tells you what to monitor and what could confound your results.</p></div>
+  </div>
+  <div class="callout"><b>Provenance</b> — the logic-model form is codified in the W.K. Kellogg Foundation <em>Logic Model Development Guide</em> and the University of Wisconsin–Extension logic model, and underlies theory-based and outcomes evaluation across the field.</div>
+</div></section>
+
+<!-- EVALUATION FRAMEWORKS -->
+<section id="frameworks"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Evaluation frameworks</span><h2>Choosing a lens for the judgment</h2>
+    <p class="lead">No single framework fits every evaluation. Each answers a different question and enters the program's life at a different moment. Match the framework to your purpose and your stage.</p></div>
+  <div class="tbl-wrap"><table>
+    <tr><th>Framework</th><th>Core question</th><th>Structure</th><th>Best used for</th></tr>
+    <tr><td><b>Formative</b></td><td>How can we improve it while it runs?</td><td>Ongoing feedback during design/delivery</td><td>Refining a program in progress</td></tr>
+    <tr><td><b>Summative</b></td><td>Did it work; should it continue?</td><td>Judgment of outcomes after maturity</td><td>Accountability, continuation, scaling decisions</td></tr>
+    <tr><td><b>CIPP (Stufflebeam)</b></td><td>Is the program well-conceived and run?</td><td>Context · Input · Process · Product</td><td>Comprehensive, improvement-oriented evaluation</td></tr>
+    <tr><td><b>Kirkpatrick's four levels</b></td><td>Did training change behavior &amp; results?</td><td>Reaction · Learning · Behavior · Results</td><td>Training &amp; professional-development programs</td></tr>
+    <tr><td><b>Theory-based / outcomes</b></td><td>Do outcomes follow the change theory?</td><td>Logic model / theory of change tested</td><td>Explaining <em>why</em> a program does or doesn't work</td></tr>
+    <tr><td><b>Needs assessment</b></td><td>What is the gap we should address?</td><td>Gap between current &amp; desired state</td><td>Front-end planning before a program exists</td></tr>
+    <tr><td><b>Utilization-focused (Patton)</b></td><td>Will intended users actually use it?</td><td>Designed around specific users &amp; uses</td><td>Ensuring findings inform real decisions</td></tr>
+    <tr><td><b>Developmental (Patton)</b></td><td>How do we adapt as the program evolves?</td><td>Real-time feedback amid emergence &amp; complexity</td><td>Innovations and systems change without a fixed model</td></tr>
+    <tr><td><b>Empowerment (Fetterman)</b></td><td>Can stakeholders evaluate themselves?</td><td>Participants own the evaluation &amp; build capacity</td><td>Community programs; self-determination &amp; ownership</td></tr>
+    <tr><td><b>Goal-free (Scriven)</b></td><td>What did it actually do — intended or not?</td><td>Evaluator brackets stated goals; looks at all effects</td><td>Surfacing side effects and unintended consequences</td></tr>
+    <tr><td><b>RE-AIM</b></td><td>Will it work at scale in the real world?</td><td>Reach · Effectiveness · Adoption · Implementation · Maintenance</td><td>Judging external validity and scalability of an intervention</td></tr>
+  </table></div>
+  <div class="grid g4" style="margin-top:20px">
+    <div class="card hoverable"><span class="tag">CIPP · Context</span><h3>Needs &amp; goals</h3><p class="kv">Assess needs, assets, and problems in the setting to set defensible goals and priorities.</p></div>
+    <div class="card hoverable"><span class="tag">CIPP · Input</span><h3>Plans &amp; resources</h3><p class="kv">Appraise competing strategies, work plans, and budgets for feasibility and fit.</p></div>
+    <div class="card hoverable"><span class="tag">CIPP · Process</span><h3>Implementation</h3><p class="kv">Monitor how faithfully and how well the plan is being carried out in practice.</p></div>
+    <div class="card hoverable"><span class="tag">CIPP · Product</span><h3>Results</h3><p class="kv">Measure and interpret outcomes — intended and unintended, short and long term.</p></div>
+  </div>
+</div></section>
+
+<!-- POLICY CRITERIA + SCORER -->
+<section id="criteria"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Policy analysis criteria</span><h2>The standards by which options are weighed</h2>
+    <p class="lead">Bardach's "eightfold path" ends by projecting outcomes and confronting trade-offs. These five criteria are the yardsticks analysts apply — rarely satisfied all at once, which is precisely why the trade-offs must be made explicit rather than hidden.</p></div>
+  <div class="grid g4" style="margin-bottom:24px">
+    <div class="card"><span class="tag">Effectiveness</span><h3>Does it work?</h3><p class="kv">The extent to which the option actually achieves the intended goal or reduces the problem.</p></div>
+    <div class="card"><span class="tag">Efficiency</span><h3>At what cost?</h3><p class="kv">Benefits relative to costs — cost-benefit (dollar-valued) or cost-effectiveness (cost per unit of outcome).</p></div>
+    <div class="card"><span class="tag">Equity</span><h3>For whom?</h3><p class="kv">How burdens and benefits are distributed across groups — fairness, not just aggregate gain.</p></div>
+    <div class="card"><span class="tag">Feasibility</span><h3>Can it be done?</h3><p class="kv">Administrative, technical, and fiscal capacity to actually implement the option as designed.</p></div>
+  </div>
+  <div class="card" style="margin-bottom:24px"><span class="tag">Political acceptability</span><h3>Will it be adopted and sustained?</h3><p class="kv">Whether relevant stakeholders and authorizers will tolerate or support the option — the criterion that determines whether a technically sound policy ever survives contact with politics.</p></div>
+
+  <h3 style="margin-bottom:12px">Weigh the options — check each criterion this policy option credibly meets</h3>
+  <div class="checklist" id="checklist">
+    <div class="ck" data-w="24"><div class="box"></div><div class="t"><b>Effectiveness — evidence it achieves the goal</b><span>There is credible evidence (from theory, pilots, or comparable programs) that the option meaningfully reduces the problem.</span></div></div>
+    <div class="ck" data-w="20"><div class="box"></div><div class="t"><b>Efficiency — benefits justify the costs</b><span>A cost-benefit or cost-effectiveness comparison shows the option is a defensible use of scarce resources.</span></div></div>
+    <div class="ck" data-w="22"><div class="box"></div><div class="t"><b>Equity — fair distribution of burdens &amp; benefits</b><span>The option narrows rather than widens gaps, and its effects have been disaggregated by group.</span></div></div>
+    <div class="ck" data-w="18"><div class="box"></div><div class="t"><b>Feasibility — capacity to implement</b><span>The administrative, technical, and fiscal capacity exists to deliver the option as designed.</span></div></div>
+    <div class="ck" data-w="16"><div class="box"></div><div class="t"><b>Political acceptability — authorizers will support it</b><span>Key stakeholders and decision-makers will adopt and sustain the option through the political process.</span></div></div>
+  </div>
+  <div class="score">
+    <div class="kv">Composite option strength</div>
+    <div class="meter"><div class="fill" id="critFill"></div></div>
+    <div class="verdict" id="critVerdict" style="color:var(--muted)">Check the criteria this option meets</div>
+  </div>
+  <div class="callout" style="margin-top:16px"><b>Trade-offs are the point.</b> The most efficient option is often not the most equitable; the most effective is often not the most feasible or politically acceptable. Analysis does not eliminate these tensions — it makes them visible so the decision-maker owns them consciously.</div>
+</div></section>
+
+<!-- RESOURCE ALLOCATION & ACCOUNTABILITY -->
+<section id="resources"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Resource allocation &amp; accountability</span><h2>Turning dollars into learning</h2>
+    <p class="lead">Policy is enacted through budgets. How resources are raised, deployed, and accounted for expresses a system's real priorities — and whether stated commitments to equity survive the ledger.</p></div>
+  <div class="grid g2">
+    <div class="card"><h3>Budgeting logic &amp; resource deployment</h3>
+      <ul>
+        <li><b>Adequacy</b> — are resources sufficient to reach the standard expected of all students?</li>
+        <li><b>Equity vs. equality</b> — equal spending is not equal opportunity; adequacy often requires unequal, need-weighted allocation</li>
+        <li><b>Weighted-student / formula funding</b> — dollars follow students, weighted for poverty, disability, and language needs</li>
+        <li><b>Vertical vs. horizontal equity</b> — treating unequal needs unequally vs. equals equally</li>
+        <li><b>Cost-effectiveness in deployment</b> — which uses of the marginal dollar move outcomes most (Levin &amp; McEwan)</li>
+      </ul></div>
+    <div class="card"><h3>Accountability systems &amp; assessment</h3>
+      <ul>
+        <li><b>Standards &amp; assessment</b> — clear goals with valid, reliable measures of student learning</li>
+        <li><b>Consequential accountability</b> — attaching stakes to results, and its incentive effects (Campbell's Law, narrowing)</li>
+        <li><b>Inputs, outputs, outcomes</b> — accountability should reach outcomes, not just compliance with inputs</li>
+        <li><b>Data use &amp; continuous improvement</b> — evidence cycles that inform practice, not just rank it</li>
+        <li><b>Transparency &amp; reporting</b> — disaggregated public reporting that surfaces gaps rather than masking them</li>
+      </ul></div>
+  </div>
+  <div class="callout"><b>Campbell's Law.</b> "The more any quantitative indicator is used for social decision-making, the more subject it will be to corruption pressures and the more apt it will be to distort and corrupt the processes it is intended to monitor." A caution at the heart of high-stakes accountability design.</div>
+</div></section>
+
+<!-- EQUITY LENS -->
+<section id="equity"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Foundations of systemic (in)equity</span><h2>The equity lens on policy and evaluation</h2>
+    <p class="lead">An aggregate "it works" can conceal that a policy worked for some and failed others — or widened the very gaps it meant to close. An equity lens is not an add-on; it changes what counts as success.</p></div>
+  <div class="grid g4">
+    <div class="card hoverable"><span class="tag">Structural inequity</span><h3>Beyond individual bias</h3><p class="kv">Inequities are produced and reproduced by policies, funding structures, and institutional routines — not only individual attitudes. Analysis must interrogate the system, not just the actor.</p></div>
+    <div class="card hoverable"><span class="tag">Disaggregation</span><h3>Averages hide gaps</h3><p class="kv">Break every result down by race, income, disability, language, and gender. An improved mean can mask a widening disparity beneath it.</p></div>
+    <div class="card hoverable"><span class="tag">Equity vs. equality</span><h3>Same ≠ fair</h3><p class="kv">Equality gives everyone the same; equity gives each what they need to reach a common standard. Adequacy and vertical equity operationalize the difference.</p></div>
+    <div class="card hoverable"><span class="tag">Unintended consequences</span><h3>Watch the second-order effects</h3><p class="kv">Policies ripple. Incentives get gamed, resources shift, and burdens fall unevenly. Evaluate for the effects you didn't intend, not only the ones you promised.</p></div>
+  </div>
+  <div class="callout"><b>Equity-focused evaluation</b> asks not just "what was the average effect?" but "who benefited, who was left out, and did the intervention shift the underlying structure of opportunity?" — reframing merit and worth around justice.</div>
+</div></section>
+
+<!-- POLICY ANALYSIS WORKFLOW (Bardach eightfold) -->
+<section id="eightfold"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">A practical method</span><h2>Bardach's eightfold path to policy analysis</h2>
+    <p class="lead">Eugene Bardach's widely taught sequence gives a repeatable spine for an analysis — iterative in practice, but disciplined in structure.</p></div>
+  <div class="steps">
+    <div class="step"><div class="num"></div><div><h4>Define the problem</h4><p>State it as a deficit or opportunity, quantified where possible, framed to admit real solutions — and beware defining the solution into the problem.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Assemble the evidence</h4><p>Gather data and prior research that bear on the problem's magnitude and on what has worked elsewhere. Spend effort where it changes the answer.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Construct the alternatives</h4><p>Lay out a realistic menu of policy options — including the status quo as a baseline — before narrowing.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Select the criteria</h4><p>Choose the evaluative standards — effectiveness, efficiency, equity, feasibility, acceptability — that will discipline the comparison.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Project the outcomes</h4><p>For each alternative, forecast what would actually happen against each criterion — the hardest and most honest step.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Confront the trade-offs</h4><p>Where no option dominates, make the trade-offs across criteria explicit and comparable.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Decide</h4><p>Apply judgment to reach a recommendation — and test it by being able to defend it to a skeptic.</p></div></div>
+    <div class="step"><div class="num"></div><div><h4>Tell your story</h4><p>Communicate the analysis clearly to the decision-maker — the "New York taxi driver" test of coherence and candor.</p></div></div>
+  </div>
+</div></section>
+
+<!-- POLICY INSTRUMENTS (Hood) -->
+<section id="instruments"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Policy instruments</span><h2>The tools a government actually has</h2>
+    <p class="lead">A policy goal is inert until it is attached to an instrument — a mechanism through which the state acts on behavior. Christopher Hood's <em>Tools of Government</em> sorts them by the resource they draw on (the <b>NATO</b> scheme); Vedung's shorthand calls them <b>carrots, sticks, and sermons</b>. Most real policies bundle several. Naming the instrument disciplines the analysis of feasibility and side effects.</p></div>
+  <div class="grid g4">
+    <div class="card hoverable"><span class="tag">Treasure · Carrots</span><h3>Incentives</h3><p class="kv">Money that rewards or penalizes: grants, per-pupil funding weights, performance bonuses, vouchers, tax credits. Powerful but costly, and prone to gaming when tied to a single indicator.</p></div>
+    <div class="card hoverable"><span class="tag">Authority · Sticks</span><h3>Regulation</h3><p class="kv">Legal command: mandates, standards, licensure, class-size caps, accountability sanctions. Fast to enact and low-cost to the treasury, but blunt and dependent on monitoring and compliance.</p></div>
+    <div class="card hoverable"><span class="tag">Nodality · Sermons</span><h3>Information</h3><p class="kv">Persuasion and disclosure: report cards, public data, awareness campaigns, best-practice guidance, nudges. Cheap and light-touch, but weak where interests or capacity block a response.</p></div>
+    <div class="card hoverable"><span class="tag">Organization · Capacity</span><h3>Direct provision &amp; capacity</h3><p class="kv">The state acts through its own people and organizations: running schools, deploying coaches, building data systems, and training the workforce that any reform ultimately depends on.</p></div>
+  </div>
+  <div class="callout"><b>Choosing an instrument is a values choice.</b> The same goal — raise reading scores — can be pursued by paying (incentive), requiring (regulation), publishing (information), or staffing (capacity). Each distributes burdens differently, demands different administrative capacity, and fails in a different way. The instrument, not just the aim, is what the analyst must defend.</div>
+</div></section>
+
+<!-- COST-BENEFIT VS COST-EFFECTIVENESS -->
+<section id="cba"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Efficiency, worked</span><h2>Cost-benefit vs. cost-effectiveness</h2>
+    <p class="lead">Both ask whether an option is worth its cost, but they answer differently. <b>Cost-effectiveness (CEA)</b> compares cost per unit of a single outcome, so outcomes need not be dollar-valued. <b>Cost-benefit (CBA)</b> converts every effect to money, allowing a net-benefit verdict and comparison across unlike programs. Work a small example (Levin &amp; McEwan's method) to see how each reads the same two programs.</p></div>
+
+  <div class="tbl-wrap"><table>
+    <tr><th>Program</th><th>Cost / student·yr</th><th>Effect (reading)</th><th>CEA: cost per 0.10 SD</th><th>CBA: benefit @ $3,000 per 0.10 SD</th><th>Net benefit · B/C</th></tr>
+    <tr><td><b>A — Class-size reduction</b></td><td>$2,400</td><td>+0.15 SD</td><td>$2,400 ÷ 1.5 = <b>$1,600</b></td><td>1.5 × $3,000 = $4,500</td><td>$4,500 − $2,400 = <b>+$2,100</b> · 1.9</td></tr>
+    <tr><td><b>B — Peer tutoring</b></td><td>$600</td><td>+0.20 SD</td><td>$600 ÷ 2.0 = <b>$300</b></td><td>2.0 × $3,000 = $6,000</td><td>$6,000 − $600 = <b>+$5,400</b> · 10.0</td></tr>
+  </table></div>
+
+  <div class="grid g2" style="margin-top:20px">
+    <div class="card"><span class="tag">Reading the result</span><h3>Same data, converging verdict</h3>
+      <p class="kv"><b>CEA</b> says Program B buys a 0.10 SD gain for $300 versus $1,600 for A — roughly five times more outcome per dollar, with no need to price learning. <b>CBA</b> goes further: both clear their cost (net benefits are positive), but B returns $10 per $1 spent against A's $1.90. When outcomes can be credibly monetized, CBA ranks unlike options; when they cannot, CEA still discriminates cleanly.</p></div>
+    <div class="card"><span class="tag">Discounting &amp; opportunity cost</span><h3>Why timing and the road not taken matter</h3>
+      <p class="kv"><b>Discounting</b> — benefits arrive in the future and must be valued in today's terms: present value = future value ÷ (1 + r)<sup>t</sup>. A $10,000 lifetime-earnings gain realized in 10 years, discounted at 3%, is worth only $10,000 ÷ 1.03<sup>10</sup> ≈ <b>$7,441</b> now. <b>Opportunity cost</b> — every dollar spent on A is a dollar not spent on its best alternative use: the $2,400 for one class-size slot could instead fund <b>four</b> tutoring slots. Cost is what you give up, not just what you write a check for.</p></div>
+  </div>
+  <div class="callout"><b>The numbers above are illustrative.</b> Real analyses must justify the effect sizes, the shadow price placed on an SD of achievement, the discount rate, and whose costs and benefits count (the standing question). The discipline is not the arithmetic — it is defending every assumption the arithmetic rests on.</div>
+</div></section>
+
+<!-- STAKEHOLDER ANALYSIS -->
+<section id="stakeholders"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Stakeholder analysis</span><h2>Mapping who can shape the outcome</h2>
+    <p class="lead">Feasibility and political acceptability are not abstractions — they are people with power and interests. A power/interest grid (Eden &amp; Ackermann; Mendelow) sorts stakeholders into four quadrants, each implying a different engagement strategy. The point is to anticipate resistance and coalition before, not after, a decision.</p></div>
+  <div class="grid g2">
+    <div class="card"><span class="tag">High power · High interest</span><h3>Manage closely — key players</h3><p class="kv">School board, superintendent, teachers' union, state education agency. They can make or break adoption <em>and</em> care intensely. Engage directly, negotiate, and secure their buy-in first.</p></div>
+    <div class="card"><span class="tag">High power · Low interest</span><h3>Keep satisfied</h3><p class="kv">Legislature, major funders, taxpayer groups. Able to intervene decisively if roused, but not currently focused. Keep them informed enough that the policy never becomes a surprise grievance.</p></div>
+    <div class="card"><span class="tag">Low power · High interest</span><h3>Keep informed — mobilize</h3><p class="kv">Parents, students, front-line teachers, community organizations. Deeply affected but individually weak; consult them, honor their voice, and recognize they can become powerful once organized.</p></div>
+    <div class="card"><span class="tag">Low power · Low interest</span><h3>Monitor</h3><p class="kv">Vendors, peripheral agencies, the general public. Low effort for now, but watch for shifts — a focusing event can move a group into a higher-stakes quadrant overnight.</p></div>
+  </div>
+  <div class="callout"><b>Read the grid dynamically.</b> Positions are not fixed: framing, focusing events, and organizing move stakeholders between quadrants. A good analyst maps the board as it is <em>and</em> as a decision could reshape it — including whose interests the policy itself will strengthen or weaken.</div>
+</div></section>
+
+<!-- LOGIC MODEL TO THEORY OF CHANGE -->
+<section id="toc"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">From logic model to theory of change</span><h2>The map and the explanation</h2>
+    <p class="lead">The terms are used loosely, but the distinction is real and useful. A <b>logic model</b> is the operational map — the linear inputs → activities → outputs → outcomes → impact chain (which you built above). A <b>theory of change</b> is the causal argument behind it — why each link should hold, what preconditions must be in place, and what assumptions the whole edifice rests on (Weiss, 1995).</p></div>
+  <div class="grid g2">
+    <div class="card"><span class="tag">Logic model</span><h3>What the program does</h3>
+      <ul>
+        <li>Linear and left-to-right: resources to results</li>
+        <li>Describes the components at a glance</li>
+        <li>Strong for planning, management, and reporting</li>
+        <li>Built forward from what you have</li>
+        <li>Best when the pathway is well-understood and stable</li>
+      </ul></div>
+    <div class="card"><span class="tag">Theory of change</span><h3>Why it should work</h3>
+      <ul>
+        <li>Causal and often non-linear, with feedback loops</li>
+        <li>Names preconditions, assumptions, and rival pathways</li>
+        <li>Strong for strategy, complexity, and contested change</li>
+        <li>Built backward from the long-term goal</li>
+        <li>Best when the pathway is uncertain or systemic</li>
+      </ul></div>
+  </div>
+  <div class="callout"><b>When to use each.</b> Use a logic model to communicate and manage a defined program; use a theory of change to reason about how and why change happens when the terrain is complex, the actors many, and the causal links open to dispute. In practice a theory of change often <em>contains</em> a logic model — the map nested inside the argument.</div>
+</div></section>
+
+<!-- IMPLEMENTATION & EVALUATION + EQUITY IMPACT SCORER -->
+<section id="implementation"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Implementation &amp; evaluation</span><h2>Why good designs still fail on the ground</h2>
+    <p class="lead">A policy is only as good as its delivery. Implementation science studies the gap between a program on paper and the program students actually receive — and gives evaluators the constructs to measure it (Durlak &amp; DuPre; Dane &amp; Schneider). Without them, a null result cannot distinguish a bad idea from a good idea poorly delivered.</p></div>
+  <div class="grid g3">
+    <div class="card"><span class="tag">Fidelity</span><h3>Delivered as designed?</h3><p class="kv">The degree to which the program is carried out as its model intends — the core components present and adhered to. Low fidelity confounds every outcome claim.</p></div>
+    <div class="card"><span class="tag">Dosage</span><h3>How much was received?</h3><p class="kv">The quantity actually delivered and taken up — sessions attended, hours engaged. A treatment nobody received cannot show an effect; measure exposure, not just offer.</p></div>
+    <div class="card"><span class="tag">Reach · Quality · Adaptation</span><h3>Who, how well, changed how?</h3><p class="kv">Which of the intended population were engaged, how well delivery was executed, and what local adaptations were made — the difference between a faithful variant and program drift.</p></div>
+  </div>
+  <div class="callout"><b>Formative → summative is a continuum, not a switch.</b> Early on, implementation and process data feed <em>formative</em> judgments that improve delivery; as the program matures and fidelity stabilizes, attention shifts to <em>summative</em> judgments of outcome, cost, and worth. Judging outcomes before implementation is sound is a category error — you would be evaluating a program that was never really delivered.</div>
+
+  <h3 style="margin:26px 0 12px">Equity impact assessment — tick each safeguard your analysis has built in</h3>
+  <div class="checklist" id="eqcheck">
+    <div class="ck"><div class="box"></div><div class="t"><b>Disaggregated by subgroup</b><span>Outcomes will be broken out by race, income, disability, language, and gender — not reported only as an average.</span></div></div>
+    <div class="ck"><div class="box"></div><div class="t"><b>Affected communities engaged</b><span>Those the policy touches helped shape the problem definition and the design, not merely receive it.</span></div></div>
+    <div class="ck"><div class="box"></div><div class="t"><b>Baseline disparities documented</b><span>Existing gaps are measured up front, so "improvement" can be judged against who started where.</span></div></div>
+    <div class="ck"><div class="box"></div><div class="t"><b>Distributional effects assessed</b><span>The analysis names who bears the burdens and who reaps the benefits, not just the aggregate gain.</span></div></div>
+    <div class="ck"><div class="box"></div><div class="t"><b>Resources weighted to need</b><span>Allocation reflects vertical equity and adequacy — more where the need is greater, not identical shares.</span></div></div>
+    <div class="ck"><div class="box"></div><div class="t"><b>Barriers to access addressed</b><span>Practical obstacles (cost, transport, language, information) that would exclude the intended beneficiaries are anticipated.</span></div></div>
+    <div class="ck"><div class="box"></div><div class="t"><b>Unintended consequences monitored</b><span>Second-order and gaming effects that could fall unevenly are tracked, not only the promised outcomes.</span></div></div>
+    <div class="ck"><div class="box"></div><div class="t"><b>Accountability for gaps assigned</b><span>Someone owns closing the disparity, with a plan to act if the policy widens rather than narrows it.</span></div></div>
+  </div>
+  <div class="score">
+    <div class="kv">Equity robustness of the analysis</div>
+    <div class="meter"><div class="fill" id="eqFill"></div></div>
+    <div class="verdict" id="eqVerdict" style="color:var(--muted)">Tick each safeguard your analysis has addressed</div>
+  </div>
+</div></section>
+
+<!-- POLICY MEMO -->
+<section id="memo"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Communicating the analysis</span><h2>Writing the policy memo</h2>
+    <p class="lead">Bardach's eighth step — "tell your story" — usually takes the form of a decision memo. Analysis that a busy decision-maker cannot follow does not get used. The memo is a genre with a reliable spine: lead with the recommendation, show the reasoning, and be candid about what you don't know.</p></div>
+  <div class="grid g2">
+    <div class="card"><span class="tag">Structure</span><h3>The seven parts of a decision memo</h3>
+      <ul>
+        <li><b>Bottom line up front</b> — the recommendation, in the first lines</li>
+        <li><b>Problem statement</b> — what's at stake, quantified, and why now</li>
+        <li><b>Background</b> — only the context needed to judge the choice</li>
+        <li><b>Alternatives</b> — the realistic options, including the status quo</li>
+        <li><b>Criteria &amp; assessment</b> — how each option scores, trade-offs named</li>
+        <li><b>Recommendation</b> — the defended choice and its rationale</li>
+        <li><b>Risks &amp; next steps</b> — limits, uncertainties, and what to do Monday</li>
+      </ul></div>
+    <div class="card"><span class="tag">Craft</span><h3>What separates a used memo from a filed one</h3>
+      <ul>
+        <li>Lead with the answer; the reader may stop after paragraph one</li>
+        <li>One page where one page will do; an appendix carries the detail</li>
+        <li>Show the trade-offs — a memo with no downside is not believed</li>
+        <li>Quantify claims and cite the evidence behind each number</li>
+        <li>Write for the decision-maker's world, not the analyst's</li>
+        <li>Pass the "taxi driver" test: could a smart non-expert follow it?</li>
+      </ul></div>
+  </div>
+  <div class="callout"><b>Candor is persuasive.</b> Naming the weakest link in your own recommendation builds the credibility that makes the rest of it trusted. The goal is not to win an argument but to equip a decision-maker to own a choice with open eyes.</div>
+</div></section>
+
+<!-- GLOSSARY -->
+<section id="glossary"><div class="wrap">
+  <div class="sec-head"><span class="eyebrow">Reference</span><h2>Core vocabulary</h2></div>
+  <div class="grid g2">
+    <div class="card"><ul style="list-style:none;padding:0;margin:0">
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Theory of change</b> — the causal logic by which a program's activities are expected to produce outcomes.</li>
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Logic model</b> — the inputs → activities → outputs → outcomes → impact map of that theory.</li>
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Formative vs. summative</b> — evaluation to improve vs. evaluation to judge.</li>
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Counterfactual</b> — what would have happened absent the program; the basis of causal claims.</li>
+      <li style="padding:9px 0"><b style="color:var(--ink)">Cost-effectiveness</b> — cost per unit of outcome, allowing comparison without dollar-valuing outcomes.</li>
+    </ul></div>
+    <div class="card"><ul style="list-style:none;padding:0;margin:0">
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Cost-benefit analysis</b> — comparing costs and benefits expressed in common (dollar) terms.</li>
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Adequacy</b> — resources sufficient for all students to meet a defined standard.</li>
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Vertical equity</b> — treating students with different needs differently, on purpose.</li>
+      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Implementation fidelity</b> — the degree to which a program is delivered as designed.</li>
+      <li style="padding:9px 0"><b style="color:var(--ink)">Disaggregation</b> — separating results by subgroup to reveal distributional effects.</li>
+    </ul></div>
+  </div>
+  <div class="card" style="margin-top:18px"><h3>Foundational scholars &amp; further reading</h3>
+    <div class="scholars">
+      <span class="chip">Bardach — <em>A Practical Guide for Policy Analysis (The Eightfold Path)</em></span>
+      <span class="chip">Weimer &amp; Vining — <em>Policy Analysis: Concepts &amp; Practice</em></span>
+      <span class="chip">Rossi, Lipsey &amp; Freeman — <em>Evaluation: A Systematic Approach</em></span>
+      <span class="chip">Stufflebeam &amp; Shinkfield — <em>Evaluation Theory, Models &amp; Applications (CIPP)</em></span>
+      <span class="chip">Kirkpatrick — <em>Evaluating Training Programs</em></span>
+      <span class="chip">Patton — <em>Utilization-Focused Evaluation</em></span>
+      <span class="chip">Kingdon — <em>Agendas, Alternatives &amp; Public Policies</em></span>
+      <span class="chip">Pressman &amp; Wildavsky — <em>Implementation</em></span>
+      <span class="chip">W.K. Kellogg Foundation — <em>Logic Model Development Guide</em></span>
+      <span class="chip">Levin &amp; McEwan — <em>Cost-Effectiveness Analysis</em></span>
+      <span class="chip">Stone — <em>Policy Paradox: The Art of Political Decision Making</em></span>
+      <span class="chip">McDavid &amp; Hawthorn — <em>Program Evaluation &amp; Performance Measurement</em></span>
+      <span class="chip">Hood &amp; Margetts — <em>The Tools of Government in the Digital Age</em></span>
+      <span class="chip">Bemelmans-Videc, Rist &amp; Vedung — <em>Carrots, Sticks &amp; Sermons</em></span>
+      <span class="chip">Weiss — <em>Nothing as Practical as Good Theory (Theory of Change)</em></span>
+    </div></div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>
+    <div style="color:var(--ink);font-weight:700;margin-bottom:4px">Educational Policy Analysis &amp; Program Evaluation</div>
+    An open educational resource authored by <a href="https://github.com/Freddricklogan">Freddrick Logan</a>.
+  </div>
+  <div style="text-align:right">
+    <a href="../resources/">Resource hub</a> · <a href="https://github.com/Freddricklogan">GitHub</a> · <a href="https://www.linkedin.com/in/freddricklogan/">LinkedIn</a>
+    <div style="margin-top:6px;color:var(--dim)">Educational leadership · policy · instructional design</div>
+  </div>
+</div></footer>
+
+<script>
+// ---- Tabs: Decision Analysis I-IV ----
+document.querySelectorAll('#databs .tab').forEach(t=>{
+  t.onclick=()=>{
+    document.querySelectorAll('#databs .tab').forEach(x=>x.classList.remove('active'));
+    document.querySelectorAll('#decision .panel').forEach(p=>p.classList.remove('active'));
+    t.classList.add('active');
+    document.getElementById(t.dataset.p).classList.add('active');
+  };
+});
+
+// ---- Logic Model Builder ----
+const LM={
+  vals:[
+    'Trained student tutors · a faculty coordinator · curriculum materials · funding · room &amp; scheduled time',
+    'Recruit &amp; train tutors · match tutors to tutees · run two 45-min sessions/week · monitor attendance',
+    '24 tutors trained · 60 students served · ~1,900 tutoring hours delivered · weekly progress logs',
+    'Short: reading/math skill gains · Medium: course grades &amp; attendance rise · Long: on-track to graduate',
+    'Higher graduation &amp; postsecondary readiness; a narrowed achievement gap for participating students'
+  ],
+  defs:[
+    '<b>Inputs</b> — the resources invested in the program: people, funding, materials, facilities, and time. They are what you commit before anything happens.',
+    '<b>Activities</b> — what the program actually does with its inputs: the processes, actions, and services delivered to participants.',
+    '<b>Outputs</b> — the direct, countable products of activities (people served, sessions held, hours delivered). Outputs measure effort and reach, <em>not</em> change.',
+    '<b>Outcomes</b> — the changes in participants that the program is meant to cause, sequenced over time: <b>short-term</b> (knowledge, skills, attitudes), <b>medium-term</b> (behavior, grades), and <b>long-term</b> (status, achievement).',
+    '<b>Impact</b> — the ultimate, often system-level change the program contributes to over the long run, typically shared with other causes and hardest to attribute.'
+  ],
+  hints:[
+    'Start with what you put in. Inputs are the resources committed before the program can run.',
+    'Inputs enable activities — the concrete things the program does with those resources.',
+    'Activities generate outputs: the countable products of effort. Note these describe doing, not changing.',
+    'Outputs are meant to produce outcomes — the actual changes in participants, unfolding short to long term.',
+    'Outcomes, if the theory holds, accumulate into impact: the broad, long-run change the program serves.'
+  ]
+};
+let lm=0;
+function renderLM(){
+  for(let i=0;i<5;i++){
+    document.getElementById('r'+i).innerHTML = i<=lm ? LM.vals[i] : '';
+    document.querySelectorAll('#logicmodel .rung')[i].classList.toggle('on', i<=lm);
+  }
+  document.getElementById('lmHint').textContent=LM.hints[lm];
+  document.getElementById('lmDef').innerHTML=LM.defs[lm];
+  document.getElementById('lmPrev').disabled = lm===0;
+  document.getElementById('lmNext').textContent = lm===4 ? 'Restart' : 'Next stage →';
+}
+document.getElementById('lmNext').onclick=()=>{ lm = lm===4 ? 0 : lm+1; renderLM(); };
+document.getElementById('lmPrev').onclick=()=>{ if(lm>0){lm--;renderLM();} };
+document.querySelectorAll('#logicmodel .rung').forEach(r=>{
+  r.onclick=()=>{ lm=parseInt(r.dataset.r,10); renderLM(); };
+});
+renderLM();
+
+// ---- Policy criteria scorer ----
+const cks=document.querySelectorAll('#checklist .ck');
+function scoreCriteria(){
+  let s=0; cks.forEach(c=>{ if(c.classList.contains('on')) s+=parseInt(c.dataset.w,10); });
+  s=Math.min(100,s);
+  document.getElementById('critFill').style.width=s+'%';
+  const v=document.getElementById('critVerdict');
+  if(s===0){v.textContent='Check the criteria this option meets';v.style.color='var(--muted)';}
+  else if(s<40){v.textContent=s+'% — Weak option: it fails key criteria; reconsider or redesign';v.style.color='var(--bad)';}
+  else if(s<75){v.textContent=s+'% — Mixed: viable but with real trade-offs to confront explicitly';v.style.color='var(--warn)';}
+  else{v.textContent=s+'% — Strong option: defensible across effectiveness, equity, and feasibility';v.style.color='var(--good)';}
+}
+cks.forEach(c=>c.onclick=()=>{c.classList.toggle('on');scoreCriteria();});
+scoreCriteria();
+
+// ---- Equity impact assessment scorer ----
+const eqCks=document.querySelectorAll('#eqcheck .ck');
+function scoreEquity(){
+  let n=0; eqCks.forEach(c=>{ if(c.classList.contains('on')) n++; });
+  const s=Math.round(n/eqCks.length*100);
+  document.getElementById('eqFill').style.width=s+'%';
+  const v=document.getElementById('eqVerdict');
+  if(n===0){v.textContent='Tick each safeguard your analysis has addressed';v.style.color='var(--muted)';}
+  else if(s<50){v.textContent=s+'% — Equity blind spots remain; several safeguards are unaddressed';v.style.color='var(--bad)';}
+  else if(s<85){v.textContent=s+'% — Partial: strengthen the unchecked safeguards before deciding';v.style.color='var(--warn)';}
+  else{v.textContent=s+'% — Robust: the analysis takes distributional effects seriously';v.style.color='var(--good)';}
+}
+eqCks.forEach(c=>c.onclick=()=>{c.classList.toggle('on');scoreEquity();});
+scoreEquity();
+</script>
+</body>
+</html>
