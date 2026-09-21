@@ -1,0 +1,67 @@
+{
+  "title": "Educational Policy Analysis & Program Evaluation",
+  "subtitle": "a graduate-level guide from problem definition to policy memo, with a logic-model builder, a criteria scorer and an equity impact scorer",
+  "problem": "Education leaders and doctoral students are asked to recommend a policy or judge a programme and reach for whichever framework they met last: a logic model with no theory behind it, a cost figure with no effect beside it, an aggregate result that hides who lost. Bardach, Levin and McEwan, Stufflebeam and Weiss are on the reading list; the discipline of applying them to one decision is not practised.",
+  "solution": "A sixteen-section resource that walks the policy cycle, decision analysis in four strands, logic models and theories of change, evaluation frameworks, Bardach's criteria and eightfold path, policy instruments, cost-effectiveness against cost-benefit with a worked example, stakeholder mapping, implementation science, equity and the decision memo — with a logic-model builder that assembles a real after-school programme link by link, a criteria scorer over an option and an equity impact scorer over a policy.",
+  "pedagogy": "the memo is the destination: every section ends in something a decision-maker can act on; the builder and two scorers make the reader commit to a judgement before the page explains it; a worked CEA/CBA example uses the same two programmes so both verdicts can be compared.",
+  "section_titles": [
+    "two crafts",
+    "policy cycle",
+    "decision analysis I–IV",
+    "logic-model builder",
+    "evaluation frameworks",
+    "policy criteria",
+    "resource allocation",
+    "equity lens",
+    "Bardach's eightfold path",
+    "policy instruments",
+    "cost-benefit vs cost-effectiveness",
+    "stakeholder mapping",
+    "theory of change",
+    "implementation",
+    "the policy memo",
+    "glossary"
+  ],
+  "widgets": [
+    {
+      "name": "Decision Analysis tabs",
+      "what": "Four strands — logic of inquiry, quantitative, qualitative, program and policy evaluation — each with purpose, tools, central question and key authors"
+    },
+    {
+      "name": "Logic Model Builder",
+      "what": "Steps a sample peer-tutoring initiative through inputs, activities, outputs, outcomes and impact; any stage can be read for its definition"
+    },
+    {
+      "name": "Policy criteria scorer",
+      "what": "Weighted checklist over effectiveness, efficiency, equity, feasibility and acceptability; fills a bar and gives a Weak / Mixed / Strong verdict"
+    },
+    {
+      "name": "Equity impact scorer",
+      "what": "Checklist of equity safeguards — disaggregation, vertical equity, unintended consequences — with a verdict on remaining blind spots"
+    }
+  ],
+  "quiz_topics": [
+    "analysis before acting versus evaluation after",
+    "logic model versus theory of change",
+    "cost-effectiveness arithmetic from the worked example",
+    "fidelity and dosage in implementation",
+    "disaggregation under the equity lens"
+  ],
+  "tour": [
+    "the first section opens and the count rises.",
+    "the two crafts, theories of change, cost-effectiveness, implementation and equity"
+  ],
+  "repo": "educational-policy-analysis",
+  "tests": 7,
+  "cov_all": 79.84,
+  "cov_kit": 78.75,
+  "vars": 26,
+  "inline_styles": 41,
+  "style_classes": 15,
+  "buttons": 6,
+  "tables": 2,
+  "main_note": "wrapped the content in a `<main>` landmark",
+  "sections": 16,
+  "reading_min": 18,
+  "words": 4138
+}

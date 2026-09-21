@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Educational Policy Analysis &amp; Program Evaluation — A Graduate Resource</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Educational Policy Analysis &amp; Program Evaluation</title>
 <meta name="description" content="An executive, graduate-level interactive resource on educational policy analysis and program evaluation: the policy process, decision analysis, logic models, evaluation frameworks, policy criteria, resource allocation, and equity. Authored by Freddrick Logan.">
 <meta name="author" content="Freddrick Logan">
 <meta name="theme-color" content="#14213d">
@@ -12,210 +13,18 @@
 <meta property="og:description" content="From framing a policy problem to weighing options, allocating resources, and judging effects and equity — an interactive graduate-level resource.">
 <meta property="og:url" content="https://freddricklogan.github.io/educational-policy-analysis/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314213d'/%3E%3Cline x1='16' y1='6' x2='16' y2='24' stroke='%2394773d' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='8' y1='10' x2='24' y2='10' stroke='%2394773d' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='16' cy='7' r='2' fill='%2394773d'/%3E%3Cpath d='M8 10 L5 17 a3 3 0 0 0 6 0 Z' fill='none' stroke='%2394773d' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M24 10 L21 17 a3 3 0 0 0 6 0 Z' fill='none' stroke='%2394773d' stroke-width='2' stroke-linejoin='round'/%3E%3Cline x1='11' y1='24' x2='21' y2='24' stroke='%2394773d' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
-<style>
-  /* ==== EXECUTIVE DESIGN SYSTEM — light, editorial, WCAG-aware ==== */
-  :root{
-    --paper:#ffffff;--paper2:#f5f7f9;--paper3:#eef1f5;
-    --navy:#14213d;--navy2:#1c2f4f;
-    --panel:#ffffff;--panel2:#ffffff;--panel3:#f5f7f9;
-    --line:#e3e7ec;--line2:#d1d8e2;
-    --accent:#1e3a5f;--accent2:#2a5486;--accent3:#243f6a;
-    --ink:#14213d;--body:#33404f;--muted:#4c596b;--dim:#5f6c7e;
-    --gold:#94773d;--gold-soft:#f3eddf;
-    --good:#15803d;--warn:#b45309;--bad:#b3261e;
-    --serif:Georgia,'Iowan Old Style','Palatino Linotype','Times New Roman',serif;
-    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Inter,system-ui,sans-serif;
-    --r:12px;--maxw:1060px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--body);line-height:1.7;background:var(--paper);
-    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-  a{color:var(--accent);text-decoration:none}
-  a:hover{color:var(--accent2);text-decoration:underline}
-  a:focus-visible,button:focus-visible,.tab:focus-visible,.opt:focus-visible,.ck:focus-visible,input:focus-visible{
-    outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
-  h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:700;letter-spacing:-.01em}
-  h2{font-size:1.75rem;line-height:1.2;margin-bottom:8px}
-  h3{font-size:1.18rem;color:var(--navy);margin-bottom:8px}
-  p{color:var(--body)}
-  .lead{color:var(--muted)}
-  em{color:inherit}
-  .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;font-size:.72rem;font-weight:700;color:var(--gold)}
 
-  /* NAV */
-  nav.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(8px);
-    background:rgba(255,255,255,.92);border-bottom:1px solid var(--line)}
-  nav.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
-  .logo{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-weight:700;font-size:1.05rem;color:var(--ink);white-space:nowrap}
-  .logo svg{width:30px;height:30px}
-  .navlinks{display:flex;gap:22px;font-size:.85rem;overflow-x:auto}
-  .navlinks a{color:var(--muted);font-weight:600;white-space:nowrap}
-  .navlinks a:hover{color:var(--accent);text-decoration:none}
-  @media(max-width:860px){.navlinks{display:none}}
-
-  /* HERO */
-  header.hero{padding:80px 0 56px;position:relative}
-  .hero .eyebrow{margin-bottom:18px}
-  .hero h1{font-family:var(--serif);font-size:clamp(2.1rem,5vw,3.3rem);line-height:1.1;letter-spacing:-.02em;
-    font-weight:700;color:var(--ink);margin-bottom:22px}
-  .hero p{font-size:1.14rem;color:var(--muted);max-width:660px}
-  .hero .cta{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{padding:12px 22px;border-radius:8px;font-weight:600;font-size:.92rem;cursor:pointer;
-    border:1px solid var(--line2);background:#fff;color:var(--ink);transition:.15s;font-family:var(--sans)}
-  .btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
-  .btn.primary:hover{background:var(--navy2)}
-  .btn:hover{border-color:var(--accent);color:var(--accent)}
-  .btn.primary:hover{color:#fff}
-  .statrow{display:flex;gap:40px;margin-top:48px;flex-wrap:wrap}
-  .statrow .s .n{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--navy)}
-  .statrow .s .l{font-size:.78rem;color:var(--dim);text-transform:uppercase;letter-spacing:.09em;margin-top:2px}
-
-  /* EXECUTIVE SUMMARY / TL;DR */
-  .exec-summary{background:var(--paper2);border:1px solid var(--line2);border-left:4px solid var(--navy);
-    border-radius:12px;padding:26px 28px;margin:6px 0 0}
-  .exec-summary .tldr{font-family:var(--sans);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;
-    font-weight:700;color:var(--gold);margin-bottom:8px}
-  .exec-summary h2{font-size:1.2rem;margin-bottom:12px}
-  .exec-summary ul{list-style:none;padding:0;margin:0;display:grid;gap:9px}
-  .exec-summary li{padding-left:22px;position:relative;color:var(--muted);font-size:.96rem}
-  .exec-summary li::before{content:'';position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;
-    background:var(--gold)}
-  .exec-summary li b{color:var(--ink);font-weight:700}
-
-  section{padding:60px 0;border-top:1px solid var(--line)}
-  .sec-head{margin-bottom:34px;max-width:720px}
-  .sec-head .eyebrow{display:block;margin-bottom:12px}
-
-  .grid{display:grid;gap:20px}
-  .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-  @media(max-width:860px){.g2,.g3,.g4{grid-template-columns:1fr}}
-  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:24px;
-    box-shadow:0 1px 2px rgba(20,33,61,.04)}
-  .card.hoverable{transition:.18s}.card.hoverable:hover{border-color:var(--line2);transform:translateY(-2px);
-    box-shadow:0 14px 34px -20px rgba(20,33,61,.35)}
-  .card .tag{display:inline-block;font-family:var(--sans);font-size:.68rem;font-weight:700;text-transform:uppercase;
-    letter-spacing:.09em;color:var(--gold);background:var(--gold-soft);padding:3px 10px;border-radius:4px;margin-bottom:12px}
-  .card ul{margin:10px 0 0 0;padding-left:18px;color:var(--muted);font-size:.92rem}
-  .card ul li{margin-bottom:6px}
-  .kv{font-size:.92rem;color:var(--muted);margin-top:4px}.kv b{color:var(--ink);font-weight:700}
-
-  /* TABS */
-  .tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-  .tab{padding:10px 16px;border-radius:8px;border:1px solid var(--line2);background:#fff;color:var(--muted);
-    font-weight:600;font-size:.88rem;cursor:pointer;transition:.15s;font-family:var(--sans)}
-  .tab:hover{color:var(--accent);border-color:var(--accent)}
-  .tab.active{background:var(--navy);border-color:var(--navy);color:#fff}
-  .panel{display:none;animation:fade .3s ease}
-  .panel.active{display:block}
-  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-  .panel-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:22px}
-  @media(max-width:860px){.panel-grid{grid-template-columns:1fr}}
-  .facts{list-style:none;padding:0}
-  .facts li{display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem}
-  .facts li span:first-child{color:var(--dim);min-width:130px;font-weight:600}
-  .facts li span:last-child{color:var(--ink)}
-
-  /* SELECTOR widget */
-  .selector{background:var(--paper2);border:1px solid var(--line2);border-radius:14px;padding:28px}
-  .q{margin-bottom:20px}
-  .q p{font-weight:600;color:var(--ink);margin-bottom:10px}
-  .opts{display:flex;gap:8px;flex-wrap:wrap}
-  .opt{padding:9px 14px;border-radius:8px;border:1px solid var(--line2);background:#fff;
-    color:var(--muted);cursor:pointer;font-size:.88rem;transition:.15s;font-family:var(--sans)}
-  .opt:hover{border-color:var(--accent);color:var(--accent)}
-  .opt.sel{background:var(--navy);border-color:var(--navy);color:#fff}
-  .result{margin-top:20px;padding:20px;border-radius:10px;background:#fff;border:1px solid var(--line2);border-left:4px solid var(--gold);display:none}
-  .result.show{display:block;animation:fade .3s}
-  .result .big{font-family:var(--serif);font-size:1.25rem;font-weight:700;color:var(--navy);margin-bottom:4px}
-
-  /* STEPPER */
-  .steps{counter-reset:s;display:grid;gap:14px}
-  .step{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);
-    border-radius:12px;padding:18px 20px;box-shadow:0 1px 2px rgba(20,33,61,.04)}
-  .step .num{counter-increment:s;flex:0 0 40px;height:40px;width:40px;border-radius:9px;display:grid;place-items:center;
-    background:var(--navy);color:#fff;font-family:var(--serif);font-weight:700}
-  .step .num::before{content:counter(s,decimal-leading-zero)}
-  .step h4{font-size:1.02rem;margin-bottom:3px}
-  .step p{font-size:.92rem;color:var(--muted)}
-
-  /* TABLE */
-  table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:8px}
-  th{text-align:left;font-family:var(--sans);color:var(--navy);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;
-    padding:12px 13px;border-bottom:2px solid var(--line2)}
-  td{padding:12px 13px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:top}
-  td b{color:var(--ink);font-weight:700}
-  tbody tr:hover{background:var(--paper2)}
-  .tbl-wrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line);background:#fff}
-
-  /* LADDER / coder */
-  .coder{background:var(--paper2);border:1px solid var(--line2);border-radius:14px;padding:26px}
-  .ladder{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin:22px 0 8px;position:relative}
-  @media(max-width:860px){.ladder{grid-template-columns:1fr;gap:10px}}
-  .rung{text-align:center;padding:15px 11px;border:1px solid var(--line);background:#fff;position:relative}
-  .rung:first-child{border-radius:10px 0 0 10px}.rung:last-child{border-radius:0 10px 10px 0}
-  @media(max-width:860px){.rung{border-radius:10px!important}}
-  .rung.on{background:var(--paper3);border-color:var(--navy)}
-  .rung .lbl{font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--dim);margin-bottom:6px;font-weight:600}
-  .rung .val{font-size:.9rem;color:var(--ink);font-weight:600;min-height:2.6em}
-  .quote{font-family:var(--serif);font-style:italic;font-size:1.08rem;color:var(--ink);border-left:3px solid var(--gold);
-    padding:6px 18px;margin-bottom:10px;background:transparent}
-
-  /* CHECKLIST scorer */
-  .checklist{display:grid;gap:10px}
-  .ck{display:flex;gap:12px;align-items:flex-start;padding:13px 15px;border:1px solid var(--line);border-radius:10px;
-    cursor:pointer;transition:.15s;background:#fff}
-  .ck:hover{border-color:var(--accent)}
-  .ck.on{background:#f0f6f2;border-color:var(--good)}
-  .ck .box{flex:0 0 20px;height:20px;width:20px;border-radius:5px;border:2px solid var(--dim);display:grid;place-items:center;margin-top:2px;background:#fff}
-  .ck.on .box{background:var(--good);border-color:var(--good)}
-  .ck.on .box::after{content:'✓';color:#fff;font-weight:900;font-size:.75rem}
-  .ck .t b{display:block;color:var(--ink);font-size:.94rem;font-weight:700}
-  .ck .t span{font-size:.86rem;color:var(--muted)}
-  .score{margin-top:22px;padding:22px;border-radius:12px;text-align:center;background:var(--paper2);border:1px solid var(--line2)}
-  .score .meter{height:12px;border-radius:8px;background:var(--paper3);overflow:hidden;margin:14px 0}
-  .score .fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--navy),var(--good));transition:width .4s}
-  .score .verdict{font-family:var(--serif);font-weight:700;font-size:1.15rem}
-
-  .callout{border-left:3px solid var(--gold);background:var(--paper2);border-radius:0 10px 10px 0;padding:16px 20px;margin:18px 0;font-size:.96rem;color:var(--muted)}
-  .callout b{color:var(--ink)}
-
-  .scholars{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
-  .chip{font-size:.82rem;padding:6px 12px;border-radius:6px;border:1px solid var(--line2);color:var(--muted);background:#fff}
-
-  footer{border-top:1px solid var(--line);padding:44px 0 56px;margin-top:20px;color:var(--dim);font-size:.9rem;background:var(--paper2)}
-  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:flex-start}
-  footer a{color:var(--accent)}
-  .copyright{width:100%;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);color:var(--dim);font-size:.82rem}
-  .backhub{display:inline-flex;align-items:center;gap:7px;font-size:.85rem;color:var(--muted);margin-bottom:10px}
-  /* ==== Executive memorandum + collapsible sections ==== */
-  .memo-head{font-family:var(--serif);font-weight:700;font-size:1rem;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);border-bottom:1px solid var(--line2);padding-bottom:10px;margin-bottom:12px}
-  .memo-meta{display:grid;gap:5px;margin-bottom:16px}
-  .memo-meta>div{display:flex;gap:10px;font-size:.92rem;color:var(--muted)}
-  .memo-meta span{flex:0 0 auto;min-width:48px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:.7rem;color:var(--gold);padding-top:3px}
-  .expand-bar{max-width:var(--maxw);margin:0 auto;padding:22px 24px 0;display:flex;justify-content:flex-end}
-  .expand-bar button{font-family:var(--sans);font-size:.8rem;font-weight:600;color:var(--accent);background:#fff;border:1px solid var(--line2);border-radius:7px;padding:8px 14px;cursor:pointer}
-  .expand-bar button:hover{border-color:var(--accent)}
-  .expand-bar button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-  .sec-head.sect-toggle{cursor:pointer;position:relative;padding-right:40px}
-  .sec-head.sect-toggle::after{content:'';position:absolute;right:8px;top:10px;width:12px;height:12px;border-right:2.5px solid var(--navy);border-bottom:2.5px solid var(--navy);transform:rotate(45deg);transition:transform .2s}
-  section.collapsed .sec-head.sect-toggle::after{transform:rotate(-45deg)}
-  .sec-head.sect-toggle:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:4px}
-  section.collapsed .sect-body{display:none}
-  .sect-body{animation:fade .3s ease}
-  /* Centered footer */
-  footer .wrap{flex-direction:column;align-items:center;text-align:center;gap:6px;justify-content:center}
-  .foot-name{font-family:var(--serif);font-weight:700;color:var(--ink);font-size:1.08rem}
-  .foot-title{color:var(--muted);font-size:.92rem;max-width:640px}
-  .foot-links{margin-top:6px;font-size:.9rem}
-  .foot-links a{color:var(--accent);white-space:nowrap}
-  footer .copyright{width:100%;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);color:var(--dim);font-size:.82rem;text-align:center}
-</style>
+<link rel="canonical" href="https://freddricklogan.github.io/educational-policy-analysis/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="src/exec-shell.css">
+<link rel="stylesheet" href="src/lr-kit.css">
+<link rel="stylesheet" href="src/page.css">
 </head>
 <body>
 
-<nav class="top"><div class="wrap">
+<nav class="top" aria-label="Sections"><div class="wrap">
   <div class="logo">
     <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#14213d"/><line x1="16" y1="6" x2="16" y2="24" stroke="#94773d" stroke-width="2.2" stroke-linecap="round"/><line x1="8" y1="10" x2="24" y2="10" stroke="#94773d" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="7" r="2" fill="#94773d"/><path d="M8 10 L5 17 a3 3 0 0 0 6 0 Z" fill="none" stroke="#94773d" stroke-width="2" stroke-linejoin="round"/><path d="M24 10 L21 17 a3 3 0 0 0 6 0 Z" fill="none" stroke="#94773d" stroke-width="2" stroke-linejoin="round"/><line x1="11" y1="24" x2="21" y2="24" stroke="#94773d" stroke-width="2.2" stroke-linecap="round"/></svg>
     Policy &amp; Evaluation
@@ -237,8 +46,9 @@
   </div>
 </div></nav>
 
+<main>
 <header class="hero"><div class="wrap">
-  <a class="backhub" href="../resources/">← Educational Leadership &amp; Research Resources</a>
+  <a class="backhub" href="https://freddricklogan.github.io/resources/">← Educational Leadership &amp; Research Resources</a>
   <span class="eyebrow">A Graduate-Level Resource</span>
   <h1>Educational Policy Analysis<br>&amp; Program Evaluation.</h1>
   <p class="lead">From framing a policy problem to weighing options, allocating scarce resources, and judging effects and equity. A rigorous, interactive guide to the disciplined analysis that turns evidence into decisions — built for graduate students, evaluators, and educational leaders who must act under real constraints.</p>
@@ -314,16 +124,16 @@
   <div class="sec-head"><span class="eyebrow">Decision Analysis I–IV</span><h2>A graduate arc in systematic inquiry</h2>
     <p class="lead">The disciplined study of decisions builds in four movements — from the logic of inquiry itself, through quantitative and qualitative evidence, to the applied craft of program analysis and policy evaluation. Select a strand to see its purpose, core tools, and the questions it answers.</p></div>
   <div class="tabs" id="databs">
-    <button class="tab active" data-p="da1">I · Logic of Inquiry</button>
-    <button class="tab" data-p="da2">II · Quantitative Analysis</button>
-    <button class="tab" data-p="da3">III · Qualitative Analysis</button>
-    <button class="tab" data-p="da4">IV · Program &amp; Policy Evaluation</button>
+    <button type="button" class="tab active" data-p="da1">I · Logic of Inquiry</button>
+    <button type="button" class="tab" data-p="da2">II · Quantitative Analysis</button>
+    <button type="button" class="tab" data-p="da3">III · Qualitative Analysis</button>
+    <button type="button" class="tab" data-p="da4">IV · Program &amp; Policy Evaluation</button>
   </div>
 
   <div class="panel active" id="da1"><div class="panel-grid">
     <div class="card"><h3>I — The logic of systematic inquiry</h3>
       <p>Establishes how we come to warranted knowledge for decisions: research questions, concepts and their measurement, the difference between association and cause, validity of inference, and the ethics of studying people. It is the grammar the later strands speak.</p>
-      <p class="kv" style="margin-top:12px"><b>Central question:</b> "How do we reason from evidence to a defensible claim we can act on?"</p>
+      <p class="kv lr-s1"><b>Central question:</b> "How do we reason from evidence to a defensible claim we can act on?"</p>
       <div class="scholars"><span class="chip">Shadish, Cook &amp; Campbell</span><span class="chip">King, Keohane &amp; Verba</span><span class="chip">Popper</span></div></div>
     <ul class="facts">
       <li><span>Focus</span><span>Design of inquiry &amp; inference</span></li>
@@ -337,7 +147,7 @@
   <div class="panel" id="da2"><div class="panel-grid">
     <div class="card"><h3>II — Quantitative analysis</h3>
       <p>Turns numbers into evidence about scope, difference, and effect: descriptive statistics, sampling and inference, regression, and the design logic behind experiments and quasi-experiments used to estimate causal effects of programs and policies.</p>
-      <p class="kv" style="margin-top:12px"><b>Central question:</b> "How much, how many, and does the difference we see exceed chance and rival explanations?"</p>
+      <p class="kv lr-s1"><b>Central question:</b> "How much, how many, and does the difference we see exceed chance and rival explanations?"</p>
       <div class="scholars"><span class="chip">Angrist &amp; Pischke</span><span class="chip">Murnane &amp; Willett</span><span class="chip">Cook &amp; Campbell</span></div></div>
     <ul class="facts">
       <li><span>Data</span><span>Measured variables, administrative &amp; survey data</span></li>
@@ -351,7 +161,7 @@
   <div class="panel" id="da3"><div class="panel-grid">
     <div class="card"><h3>III — Qualitative analysis</h3>
       <p>Explains how and why a policy plays out as it does. Through interviews, observation, and documents it recovers meaning, mechanism, and context — indispensable for understanding implementation, unintended consequences, and the experience of those a policy touches.</p>
-      <p class="kv" style="margin-top:12px"><b>Central question:</b> "What is actually happening here, how do people make sense of it, and through what mechanisms?"</p>
+      <p class="kv lr-s1"><b>Central question:</b> "What is actually happening here, how do people make sense of it, and through what mechanisms?"</p>
       <div class="scholars"><span class="chip">Miles, Huberman &amp; Saldaña</span><span class="chip">Yin</span><span class="chip">Lipsky (street-level)</span></div></div>
     <ul class="facts">
       <li><span>Data</span><span>Interviews, observation, documents, cases</span></li>
@@ -365,7 +175,7 @@
   <div class="panel" id="da4"><div class="panel-grid">
     <div class="card"><h3>IV — Program analysis &amp; policy evaluation</h3>
       <p>Integrates the prior strands into applied practice: articulating a program's theory of change, framing evaluation questions, choosing a design fit for the decision, appraising costs and benefits, and judging merit, worth, and equity to inform a real choice.</p>
-      <p class="kv" style="margin-top:12px"><b>Central question:</b> "Did this program work — for whom, at what cost, and what should we do next?"</p>
+      <p class="kv lr-s1"><b>Central question:</b> "Did this program work — for whom, at what cost, and what should we do next?"</p>
       <div class="scholars"><span class="chip">Rossi, Lipsey &amp; Freeman</span><span class="chip">Stufflebeam</span><span class="chip">Patton</span><span class="chip">Bardach</span></div></div>
     <ul class="facts">
       <li><span>Focus</span><span>Applied evaluation &amp; policy recommendation</span></li>
@@ -391,17 +201,17 @@
       <div class="rung" data-r="3"><div class="lbl">Outcomes (S/M/L)</div><div class="val" id="r3"></div></div>
       <div class="rung" data-r="4"><div class="lbl">Impact</div><div class="val" id="r4"></div></div>
     </div>
-    <div style="display:flex;gap:10px;justify-content:space-between;align-items:center;margin-top:14px;flex-wrap:wrap">
-      <p class="kv" id="lmHint" style="max-width:58%">Click any stage above, or walk through the chain one link at a time.</p>
-      <div style="display:flex;gap:8px">
-        <button class="btn" id="lmPrev">Back</button>
-        <button class="btn primary" id="lmNext">Next stage →</button>
+    <div class="lr-s2">
+      <p class="kv lr-s3" id="lmHint">Click any stage above, or walk through the chain one link at a time.</p>
+      <div class="lr-s4">
+        <button type="button" class="btn" id="lmPrev">Back</button>
+        <button type="button" class="btn primary" id="lmNext">Next stage →</button>
       </div>
     </div>
-    <div class="callout" style="margin-top:16px" id="lmDef"></div>
+    <div class="callout lr-s5" id="lmDef"></div>
   </div>
 
-  <div class="grid g3" style="margin-top:20px">
+  <div class="grid g3 lr-s6">
     <div class="card"><span class="tag">Read left to right</span><h3>The "if–then" chain</h3>
       <p class="kv">Each stage is linked by an implicit "if we invest these inputs, then we can run these activities; if these activities produce these outputs, then these outcomes should follow." Naming the links exposes where a theory of change can break.</p></div>
     <div class="card"><span class="tag">Outputs ≠ outcomes</span><h3>Doing vs. changing</h3>
@@ -416,8 +226,8 @@
 <section id="frameworks"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Evaluation frameworks</span><h2>Choosing a lens for the judgment</h2>
     <p class="lead">No single framework fits every evaluation. Each answers a different question and enters the program's life at a different moment. Match the framework to your purpose and your stage.</p></div>
-  <div class="tbl-wrap"><table>
-    <tr><th>Framework</th><th>Core question</th><th>Structure</th><th>Best used for</th></tr>
+  <div class="tbl-wrap"><table><tbody>
+    <tr><th scope="row">Framework</th><th scope="row">Core question</th><th scope="row">Structure</th><th scope="row">Best used for</th></tr>
     <tr><td><b>Formative</b></td><td>How can we improve it while it runs?</td><td>Ongoing feedback during design/delivery</td><td>Refining a program in progress</td></tr>
     <tr><td><b>Summative</b></td><td>Did it work; should it continue?</td><td>Judgment of outcomes after maturity</td><td>Accountability, continuation, scaling decisions</td></tr>
     <tr><td><b>CIPP (Stufflebeam)</b></td><td>Is the program well-conceived and run?</td><td>Context · Input · Process · Product</td><td>Comprehensive, improvement-oriented evaluation</td></tr>
@@ -429,8 +239,8 @@
     <tr><td><b>Empowerment (Fetterman)</b></td><td>Can stakeholders evaluate themselves?</td><td>Participants own the evaluation &amp; build capacity</td><td>Community programs; self-determination &amp; ownership</td></tr>
     <tr><td><b>Goal-free (Scriven)</b></td><td>What did it actually do — intended or not?</td><td>Evaluator brackets stated goals; looks at all effects</td><td>Surfacing side effects and unintended consequences</td></tr>
     <tr><td><b>RE-AIM</b></td><td>Will it work at scale in the real world?</td><td>Reach · Effectiveness · Adoption · Implementation · Maintenance</td><td>Judging external validity and scalability of an intervention</td></tr>
-  </table></div>
-  <div class="grid g4" style="margin-top:20px">
+  </tbody></table></div>
+  <div class="grid g4 lr-s6">
     <div class="card hoverable"><span class="tag">CIPP · Context</span><h3>Needs &amp; goals</h3><p class="kv">Assess needs, assets, and problems in the setting to set defensible goals and priorities.</p></div>
     <div class="card hoverable"><span class="tag">CIPP · Input</span><h3>Plans &amp; resources</h3><p class="kv">Appraise competing strategies, work plans, and budgets for feasibility and fit.</p></div>
     <div class="card hoverable"><span class="tag">CIPP · Process</span><h3>Implementation</h3><p class="kv">Monitor how faithfully and how well the plan is being carried out in practice.</p></div>
@@ -442,15 +252,15 @@
 <section id="criteria"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Policy analysis criteria</span><h2>The standards by which options are weighed</h2>
     <p class="lead">Bardach's "eightfold path" ends by projecting outcomes and confronting trade-offs. These five criteria are the yardsticks analysts apply — rarely satisfied all at once, which is precisely why the trade-offs must be made explicit rather than hidden.</p></div>
-  <div class="grid g4" style="margin-bottom:24px">
+  <div class="grid g4 lr-s7">
     <div class="card"><span class="tag">Effectiveness</span><h3>Does it work?</h3><p class="kv">The extent to which the option actually achieves the intended goal or reduces the problem.</p></div>
     <div class="card"><span class="tag">Efficiency</span><h3>At what cost?</h3><p class="kv">Benefits relative to costs — cost-benefit (dollar-valued) or cost-effectiveness (cost per unit of outcome).</p></div>
     <div class="card"><span class="tag">Equity</span><h3>For whom?</h3><p class="kv">How burdens and benefits are distributed across groups — fairness, not just aggregate gain.</p></div>
     <div class="card"><span class="tag">Feasibility</span><h3>Can it be done?</h3><p class="kv">Administrative, technical, and fiscal capacity to actually implement the option as designed.</p></div>
   </div>
-  <div class="card" style="margin-bottom:24px"><span class="tag">Political acceptability</span><h3>Will it be adopted and sustained?</h3><p class="kv">Whether relevant stakeholders and authorizers will tolerate or support the option — the criterion that determines whether a technically sound policy ever survives contact with politics.</p></div>
+  <div class="card lr-s7"><span class="tag">Political acceptability</span><h3>Will it be adopted and sustained?</h3><p class="kv">Whether relevant stakeholders and authorizers will tolerate or support the option — the criterion that determines whether a technically sound policy ever survives contact with politics.</p></div>
 
-  <h3 style="margin-bottom:12px">Weigh the options — check each criterion this policy option credibly meets</h3>
+  <h3 class="lr-s8">Weigh the options — check each criterion this policy option credibly meets</h3>
   <div class="checklist" id="checklist">
     <div class="ck" data-w="24"><div class="box"></div><div class="t"><b>Effectiveness — evidence it achieves the goal</b><span>There is credible evidence (from theory, pilots, or comparable programs) that the option meaningfully reduces the problem.</span></div></div>
     <div class="ck" data-w="20"><div class="box"></div><div class="t"><b>Efficiency — benefits justify the costs</b><span>A cost-benefit or cost-effectiveness comparison shows the option is a defensible use of scarce resources.</span></div></div>
@@ -461,12 +271,12 @@
   <div class="score">
     <div class="kv">Composite option strength</div>
     <div class="meter"><div class="fill" id="critFill"></div></div>
-    <div class="verdict" id="critVerdict" style="color:var(--muted)">Check the criteria this option meets</div>
+    <div class="verdict lr-s9" id="critVerdict">Check the criteria this option meets</div>
   </div>
-  <div class="callout" style="margin-top:16px"><b>Trade-offs are the point.</b> The most efficient option is often not the most equitable; the most effective is often not the most feasible or politically acceptable. Analysis does not eliminate these tensions — it makes them visible so the decision-maker owns them consciously.</div>
+  <div class="callout lr-s5"><b>Trade-offs are the point.</b> The most efficient option is often not the most equitable; the most effective is often not the most feasible or politically acceptable. Analysis does not eliminate these tensions — it makes them visible so the decision-maker owns them consciously.</div>
 </div></section>
 
-<!-- RESOURCE ALLOCATION & ACCOUNTABILITY -->
+<!-- RESOURCE ALLOCATION &amp; ACCOUNTABILITY -->
 <section id="resources"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Resource allocation &amp; accountability</span><h2>Turning dollars into learning</h2>
     <p class="lead">Policy is enacted through budgets. How resources are raised, deployed, and accounted for expresses a system's real priorities — and whether stated commitments to equity survive the ledger.</p></div>
@@ -538,13 +348,13 @@
   <div class="sec-head"><span class="eyebrow">Efficiency, worked</span><h2>Cost-benefit vs. cost-effectiveness</h2>
     <p class="lead">Both ask whether an option is worth its cost, but they answer differently. <b>Cost-effectiveness (CEA)</b> compares cost per unit of a single outcome, so outcomes need not be dollar-valued. <b>Cost-benefit (CBA)</b> converts every effect to money, allowing a net-benefit verdict and comparison across unlike programs. Work a small example (Levin &amp; McEwan's method) to see how each reads the same two programs.</p></div>
 
-  <div class="tbl-wrap"><table>
-    <tr><th>Program</th><th>Cost / student·yr</th><th>Effect (reading)</th><th>CEA: cost per 0.10 SD</th><th>CBA: benefit @ $3,000 per 0.10 SD</th><th>Net benefit · B/C</th></tr>
+  <div class="tbl-wrap"><table><tbody>
+    <tr><th scope="row">Program</th><th scope="row">Cost / student·yr</th><th scope="row">Effect (reading)</th><th scope="row">CEA: cost per 0.10 SD</th><th scope="row">CBA: benefit @ $3,000 per 0.10 SD</th><th scope="row">Net benefit · B/C</th></tr>
     <tr><td><b>A — Class-size reduction</b></td><td>$2,400</td><td>+0.15 SD</td><td>$2,400 ÷ 1.5 = <b>$1,600</b></td><td>1.5 × $3,000 = $4,500</td><td>$4,500 − $2,400 = <b>+$2,100</b> · 1.9</td></tr>
     <tr><td><b>B — Peer tutoring</b></td><td>$600</td><td>+0.20 SD</td><td>$600 ÷ 2.0 = <b>$300</b></td><td>2.0 × $3,000 = $6,000</td><td>$6,000 − $600 = <b>+$5,400</b> · 10.0</td></tr>
-  </table></div>
+  </tbody></table></div>
 
-  <div class="grid g2" style="margin-top:20px">
+  <div class="grid g2 lr-s6">
     <div class="card"><span class="tag">Reading the result</span><h3>Same data, converging verdict</h3>
       <p class="kv"><b>CEA</b> says Program B buys a 0.10 SD gain for $300 versus $1,600 for A — roughly five times more outcome per dollar, with no need to price learning. <b>CBA</b> goes further: both clear their cost (net benefits are positive), but B returns $10 per $1 spent against A's $1.90. When outcomes can be credibly monetized, CBA ranks unlike options; when they cannot, CEA still discriminates cleanly.</p></div>
     <div class="card"><span class="tag">Discounting &amp; opportunity cost</span><h3>Why timing and the road not taken matter</h3>
@@ -591,7 +401,7 @@
   <div class="callout"><b>When to use each.</b> Use a logic model to communicate and manage a defined program; use a theory of change to reason about how and why change happens when the terrain is complex, the actors many, and the causal links open to dispute. In practice a theory of change often <em>contains</em> a logic model — the map nested inside the argument.</div>
 </div></section>
 
-<!-- IMPLEMENTATION & EVALUATION + EQUITY IMPACT SCORER -->
+<!-- IMPLEMENTATION &amp; EVALUATION + EQUITY IMPACT SCORER -->
 <section id="implementation"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Implementation &amp; evaluation</span><h2>Why good designs still fail on the ground</h2>
     <p class="lead">A policy is only as good as its delivery. Implementation science studies the gap between a program on paper and the program students actually receive — and gives evaluators the constructs to measure it (Durlak &amp; DuPre; Dane &amp; Schneider). Without them, a null result cannot distinguish a bad idea from a good idea poorly delivered.</p></div>
@@ -602,7 +412,7 @@
   </div>
   <div class="callout"><b>Formative → summative is a continuum, not a switch.</b> Early on, implementation and process data feed <em>formative</em> judgments that improve delivery; as the program matures and fidelity stabilizes, attention shifts to <em>summative</em> judgments of outcome, cost, and worth. Judging outcomes before implementation is sound is a category error — you would be evaluating a program that was never really delivered.</div>
 
-  <h3 style="margin:26px 0 12px">Equity impact assessment — tick each safeguard your analysis has built in</h3>
+  <h3 class="lr-s10">Equity impact assessment — tick each safeguard your analysis has built in</h3>
   <div class="checklist" id="eqcheck">
     <div class="ck"><div class="box"></div><div class="t"><b>Disaggregated by subgroup</b><span>Outcomes will be broken out by race, income, disability, language, and gender — not reported only as an average.</span></div></div>
     <div class="ck"><div class="box"></div><div class="t"><b>Affected communities engaged</b><span>Those the policy touches helped shape the problem definition and the design, not merely receive it.</span></div></div>
@@ -616,7 +426,7 @@
   <div class="score">
     <div class="kv">Equity robustness of the analysis</div>
     <div class="meter"><div class="fill" id="eqFill"></div></div>
-    <div class="verdict" id="eqVerdict" style="color:var(--muted)">Tick each safeguard your analysis has addressed</div>
+    <div class="verdict lr-s9" id="eqVerdict">Tick each safeguard your analysis has addressed</div>
   </div>
 </div></section>
 
@@ -652,22 +462,22 @@
 <section id="glossary"><div class="wrap">
   <div class="sec-head"><span class="eyebrow">Reference</span><h2>Core vocabulary</h2></div>
   <div class="grid g2">
-    <div class="card"><ul style="list-style:none;padding:0;margin:0">
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Theory of change</b> — the causal logic by which a program's activities are expected to produce outcomes.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Logic model</b> — the inputs → activities → outputs → outcomes → impact map of that theory.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Formative vs. summative</b> — evaluation to improve vs. evaluation to judge.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Counterfactual</b> — what would have happened absent the program; the basis of causal claims.</li>
-      <li style="padding:9px 0"><b style="color:var(--ink)">Cost-effectiveness</b> — cost per unit of outcome, allowing comparison without dollar-valuing outcomes.</li>
+    <div class="card"><ul class="lr-s11">
+      <li class="lr-s12"><b class="lr-s13">Theory of change</b> — the causal logic by which a program's activities are expected to produce outcomes.</li>
+      <li class="lr-s12"><b class="lr-s13">Logic model</b> — the inputs → activities → outputs → outcomes → impact map of that theory.</li>
+      <li class="lr-s12"><b class="lr-s13">Formative vs. summative</b> — evaluation to improve vs. evaluation to judge.</li>
+      <li class="lr-s12"><b class="lr-s13">Counterfactual</b> — what would have happened absent the program; the basis of causal claims.</li>
+      <li class="lr-s14"><b class="lr-s13">Cost-effectiveness</b> — cost per unit of outcome, allowing comparison without dollar-valuing outcomes.</li>
     </ul></div>
-    <div class="card"><ul style="list-style:none;padding:0;margin:0">
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Cost-benefit analysis</b> — comparing costs and benefits expressed in common (dollar) terms.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Adequacy</b> — resources sufficient for all students to meet a defined standard.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Vertical equity</b> — treating students with different needs differently, on purpose.</li>
-      <li style="padding:9px 0;border-bottom:1px solid var(--line)"><b style="color:var(--ink)">Implementation fidelity</b> — the degree to which a program is delivered as designed.</li>
-      <li style="padding:9px 0"><b style="color:var(--ink)">Disaggregation</b> — separating results by subgroup to reveal distributional effects.</li>
+    <div class="card"><ul class="lr-s11">
+      <li class="lr-s12"><b class="lr-s13">Cost-benefit analysis</b> — comparing costs and benefits expressed in common (dollar) terms.</li>
+      <li class="lr-s12"><b class="lr-s13">Adequacy</b> — resources sufficient for all students to meet a defined standard.</li>
+      <li class="lr-s12"><b class="lr-s13">Vertical equity</b> — treating students with different needs differently, on purpose.</li>
+      <li class="lr-s12"><b class="lr-s13">Implementation fidelity</b> — the degree to which a program is delivered as designed.</li>
+      <li class="lr-s14"><b class="lr-s13">Disaggregation</b> — separating results by subgroup to reveal distributional effects.</li>
     </ul></div>
   </div>
-  <div class="card" style="margin-top:18px"><h3>Foundational scholars &amp; further reading</h3>
+  <div class="card lr-s15"><h3>Foundational scholars &amp; further reading</h3>
     <div class="scholars">
       <span class="chip">Bardach — <em>A Practical Guide for Policy Analysis (The Eightfold Path)</em></span>
       <span class="chip">Weimer &amp; Vining — <em>Policy Analysis: Concepts &amp; Practice</em></span>
@@ -686,138 +496,20 @@
       <span class="chip">Weiss — <em>Nothing as Practical as Good Theory (Theory of Change)</em></span>
     </div></div>
 </div></section>
+</main>
 
 <footer><div class="wrap">
   <div class="foot-name">Freddrick Logan</div>
   <div class="foot-title">Educational Policy Analysis &amp; Program Evaluation</div>
   <nav class="foot-links" aria-label="Footer">
     <a href="https://fredlogan.phd">fredlogan.phd</a> &middot;
-    <a href="../resources/">Resource hub</a> &middot;
+    <a href="https://freddricklogan.github.io/resources/">Resource hub</a> &middot;
     <a href="https://github.com/Freddricklogan">GitHub</a> &middot;
     <a href="https://www.linkedin.com/in/freddricklogan/">LinkedIn</a>
   </nav>
   <div class="copyright">&copy; 2026 Freddrick Logan &mdash; Technologist &amp; Education. All rights reserved.</div>
 </div></footer>
 
-<script>
-// ---- Tabs: Decision Analysis I-IV ----
-document.querySelectorAll('#databs .tab').forEach(t=>{
-  t.onclick=()=>{
-    document.querySelectorAll('#databs .tab').forEach(x=>x.classList.remove('active'));
-    document.querySelectorAll('#decision .panel').forEach(p=>p.classList.remove('active'));
-    t.classList.add('active');
-    document.getElementById(t.dataset.p).classList.add('active');
-  };
-});
-
-// ---- Logic Model Builder ----
-const LM={
-  vals:[
-    'Trained student tutors · a faculty coordinator · curriculum materials · funding · room &amp; scheduled time',
-    'Recruit &amp; train tutors · match tutors to tutees · run two 45-min sessions/week · monitor attendance',
-    '24 tutors trained · 60 students served · ~1,900 tutoring hours delivered · weekly progress logs',
-    'Short: reading/math skill gains · Medium: course grades &amp; attendance rise · Long: on-track to graduate',
-    'Higher graduation &amp; postsecondary readiness; a narrowed achievement gap for participating students'
-  ],
-  defs:[
-    '<b>Inputs</b> — the resources invested in the program: people, funding, materials, facilities, and time. They are what you commit before anything happens.',
-    '<b>Activities</b> — what the program actually does with its inputs: the processes, actions, and services delivered to participants.',
-    '<b>Outputs</b> — the direct, countable products of activities (people served, sessions held, hours delivered). Outputs measure effort and reach, <em>not</em> change.',
-    '<b>Outcomes</b> — the changes in participants that the program is meant to cause, sequenced over time: <b>short-term</b> (knowledge, skills, attitudes), <b>medium-term</b> (behavior, grades), and <b>long-term</b> (status, achievement).',
-    '<b>Impact</b> — the ultimate, often system-level change the program contributes to over the long run, typically shared with other causes and hardest to attribute.'
-  ],
-  hints:[
-    'Start with what you put in. Inputs are the resources committed before the program can run.',
-    'Inputs enable activities — the concrete things the program does with those resources.',
-    'Activities generate outputs: the countable products of effort. Note these describe doing, not changing.',
-    'Outputs are meant to produce outcomes — the actual changes in participants, unfolding short to long term.',
-    'Outcomes, if the theory holds, accumulate into impact: the broad, long-run change the program serves.'
-  ]
-};
-let lm=0;
-function renderLM(){
-  for(let i=0;i<5;i++){
-    document.getElementById('r'+i).innerHTML = i<=lm ? LM.vals[i] : '';
-    document.querySelectorAll('#logicmodel .rung')[i].classList.toggle('on', i<=lm);
-  }
-  document.getElementById('lmHint').textContent=LM.hints[lm];
-  document.getElementById('lmDef').innerHTML=LM.defs[lm];
-  document.getElementById('lmPrev').disabled = lm===0;
-  document.getElementById('lmNext').textContent = lm===4 ? 'Restart' : 'Next stage →';
-}
-document.getElementById('lmNext').onclick=()=>{ lm = lm===4 ? 0 : lm+1; renderLM(); };
-document.getElementById('lmPrev').onclick=()=>{ if(lm>0){lm--;renderLM();} };
-document.querySelectorAll('#logicmodel .rung').forEach(r=>{
-  r.onclick=()=>{ lm=parseInt(r.dataset.r,10); renderLM(); };
-});
-renderLM();
-
-// ---- Policy criteria scorer ----
-const cks=document.querySelectorAll('#checklist .ck');
-function scoreCriteria(){
-  let s=0; cks.forEach(c=>{ if(c.classList.contains('on')) s+=parseInt(c.dataset.w,10); });
-  s=Math.min(100,s);
-  document.getElementById('critFill').style.width=s+'%';
-  const v=document.getElementById('critVerdict');
-  if(s===0){v.textContent='Check the criteria this option meets';v.style.color='var(--muted)';}
-  else if(s<40){v.textContent=s+'% — Weak option: it fails key criteria; reconsider or redesign';v.style.color='var(--bad)';}
-  else if(s<75){v.textContent=s+'% — Mixed: viable but with real trade-offs to confront explicitly';v.style.color='var(--warn)';}
-  else{v.textContent=s+'% — Strong option: defensible across effectiveness, equity, and feasibility';v.style.color='var(--good)';}
-}
-cks.forEach(c=>c.onclick=()=>{c.classList.toggle('on');scoreCriteria();});
-scoreCriteria();
-
-// ---- Equity impact assessment scorer ----
-const eqCks=document.querySelectorAll('#eqcheck .ck');
-function scoreEquity(){
-  let n=0; eqCks.forEach(c=>{ if(c.classList.contains('on')) n++; });
-  const s=Math.round(n/eqCks.length*100);
-  document.getElementById('eqFill').style.width=s+'%';
-  const v=document.getElementById('eqVerdict');
-  if(n===0){v.textContent='Tick each safeguard your analysis has addressed';v.style.color='var(--muted)';}
-  else if(s<50){v.textContent=s+'% — Equity blind spots remain; several safeguards are unaddressed';v.style.color='var(--bad)';}
-  else if(s<85){v.textContent=s+'% — Partial: strengthen the unchecked safeguards before deciding';v.style.color='var(--warn)';}
-  else{v.textContent=s+'% — Robust: the analysis takes distributional effects seriously';v.style.color='var(--good)';}
-}
-eqCks.forEach(c=>c.onclick=()=>{c.classList.toggle('on');scoreEquity();});
-scoreEquity();
-</script>
-<script>
-(function(){
-  if(document.querySelector('.sec-head.sect-toggle')) return;
-  var firstCollapsible=null;
-  [].slice.call(document.querySelectorAll('section')).forEach(function(sec){
-    var wrap=sec.querySelector('.wrap'); if(!wrap) return;
-    var head=wrap.querySelector('.sec-head'); if(!head) return;
-    if(wrap.querySelector('.memo-head')||wrap.querySelector('.exec-summary')) return;
-    var body=document.createElement('div'); body.className='sect-body';
-    var n=head.nextSibling;
-    while(n){ var nx=n.nextSibling; body.appendChild(n); n=nx; }
-    wrap.appendChild(body);
-    head.classList.add('sect-toggle');
-    head.setAttribute('role','button'); head.setAttribute('tabindex','0'); head.setAttribute('aria-expanded','false');
-    sec.classList.add('collapsed');
-    if(!firstCollapsible) firstCollapsible=sec;
-    function set(open){ sec.classList[open?'remove':'add']('collapsed'); head.setAttribute('aria-expanded',open?'true':'false'); }
-    head.addEventListener('click',function(){ set(sec.classList.contains('collapsed')); });
-    head.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); set(sec.classList.contains('collapsed')); } });
-  });
-  function openHash(){ var id=decodeURIComponent((location.hash||'').slice(1)); if(!id) return; var el=document.getElementById(id); if(!el) return; var s=el.closest?el.closest('section'):null; if(s&&s.classList.contains('collapsed')){ s.classList.remove('collapsed'); var h=s.querySelector('.sec-head.sect-toggle'); if(h)h.setAttribute('aria-expanded','true'); } setTimeout(function(){ try{el.scrollIntoView({behavior:'smooth',block:'start'});}catch(e){el.scrollIntoView();} },40); }
-  window.addEventListener('hashchange',openHash);
-  if(firstCollapsible){
-    var bar=document.createElement('div'); bar.className='expand-bar';
-    var btn=document.createElement('button'); btn.type='button'; btn.textContent='Expand all sections'; btn.setAttribute('aria-expanded','false');
-    var expanded=false;
-    btn.addEventListener('click',function(){
-      expanded=!expanded;
-      document.querySelectorAll('section').forEach(function(s){ var h=s.querySelector('.sec-head.sect-toggle'); if(!h) return; s.classList[expanded?'remove':'add']('collapsed'); h.setAttribute('aria-expanded',expanded?'true':'false'); });
-      btn.textContent=expanded?'Collapse all sections':'Expand all sections'; btn.setAttribute('aria-expanded',expanded?'true':'false');
-    });
-    bar.appendChild(btn);
-    firstCollapsible.parentNode.insertBefore(bar, firstCollapsible);
-  }
-  openHash();
-})();
-</script>
+<script type="module" src="src/main.js"></script>
 </body>
 </html>
