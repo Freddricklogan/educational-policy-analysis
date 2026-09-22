@@ -3,6 +3,7 @@ export const config = {
   title: 'Educational Policy Analysis & Program Evaluation',
   tagline: 'A graduate-level guide to policy analysis and program evaluation: the policy cycle, decision analysis, logic models and theories of change, evaluation frameworks, Bardach’s criteria, cost-effectiveness, equity and implementation, with a logic-model builder and two scorers.',
   repo: 'https://github.com/Freddricklogan/educational-policy-analysis',
+  theme: 'plum',
   pagesUrl: 'https://freddricklogan.github.io/educational-policy-analysis/',
   quizTitle: 'Five questions on policy analysis and evaluation',
   quiz: [
